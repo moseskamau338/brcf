@@ -1,75 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="{{mix('css/app.css')}}" />
-        <link rel="stylesheet" href="{{asset('css/custom.css')}}" />
-        <title>Home</title>
-    </head>
-
-    <body>
-        <div class="relative w-full h-full">
+<x-site-layout>
+        <div x-data="{showMobileMenu: false}" class="relative w-full h-full">
             <div class="hidden md:block">
                 <img class="absolute bg-cover bg-center w-full h-full inset-0" src="https://cdn.tuk.dev/assets/templates/prodify/background.png" alt="" />
             </div>
             <div class="md:hidden">
                 <!-- <img class="absolute bg-cover bg-center w-full h-full inset-0" src="https://cdn.tuk.dev/assets/templates/prodify/backgroundMobile.png" alt="" /> -->
             </div>
-            <nav class="lg:hidden relative z-50">
+            <nav  x-show="showMobileMenu" class="lg:hidden relative z-50">
                 <div class="flex py-2 justify-between items-center px-4">
                     <div>
                         <img src="{{asset('images/logo.png')}}" class="w-1/4" alt="">
                     </div>
-                    <div class="visible flex items-center">
-                        <ul id="list" class="hidden p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-24">
-                            <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-                                <a href="./home.html">
-                                    <span class="ml-2 font-bold">Home</span>
-                                </a>
-                            </li>
-                            <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center" onclick="dropdownHandler(this)">
-                                <a href="./about-us.html">
-                                    <span class="ml-2 font-bold">About Us</span>
-                                </a>
-                            </li>
-                            <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                                <a href="./pricing.html">
-                                    <span class="ml-2 font-bold">Contact Us</span>
-                                </a>
-                            </li>
-                            <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center" onclick="dropdownHandler(this)">
-                                <a href="./knowledge-base.html">
-                                    <span class="ml-2 font-bold">Blog</span>
-                                </a>
-                            </li>
-                            <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center" onclick="dropdownHandler(this)">
-                                <a href="/">
-                                    <span class="ml-2 font-bold">Donate</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="xl:hidden">
-                            <svg id="open" onclick="MenuHandler(true)" aria-haspopup="true" aria-label="Main Menu" xmlns="http://www.w3.org/2000/svg" class="show-m-menu icon icon-tabler icon-tabler-menu" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z"></path>
-                                <line x1="4" y1="8" x2="20" y2="8"></line>
-                                <line x1="4" y1="16" x2="20" y2="16"></line>
-                            </svg>
-                            <div id="close" class="hidden close-m-menu" onclick="MenuHandler(false)">
-                                <svg aria-label="Close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" />
-                                    <line x1="18" y1="6" x2="6" y2="18" />
-                                    <line x1="6" y1="6" x2="18" y2="18" />
-                                </svg>
+                    <div  x-show="showMobileMenu" class="visible flex items-center">
+                        <div
+                         x-show="showMobileMenu"
+                            x-transition:enter="duration-150 ease-out"
+                            x-transition:enter-start="opacity-0 scale-95"
+                            x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="duration-100 ease-in"
+                            x-transition:leave-start="opacity-100 scale-100"
+                            x-transition:leave-end="opacity-0 scale-95"
+                            class="absolute  z-10 top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden">
+                          <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                            <div class="px-5 pt-4 flex items-center justify-between">
+                              <div>
+                                <img src="{{asset('images/logo.svg')}}" class="w-1/4" alt="">
+                              </div>
+                              <div class="-mr-2">
+                                <button type="button" x-on:click="showMobileMenu = false; alert('Closing')" class="bg-white rounded-md p-2
+                                inline-flex
+                                items-center
+                                justify-center
+                                text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                  <span class="sr-only">Close mobile menu</span>
+                                  <!-- Heroicon name: outline/x -->
+                                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                  </svg>
+                                </button>
+                              </div>
                             </div>
+                            <div class="px-2 pt-2 pb-3 space-y-1">
+                              <a href="{{route('home')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700
+                              hover:text-gray-900
+                              hover:bg-gray-50">Home</a>
+
+                              <a href="{{route('about')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700
+                              hover:text-gray-900 hover:bg-gray-50">About Us</a>
+
+                              <a href="{{route('contact')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700
+                              hover:text-gray-900 hover:bg-gray-50">Contact Us</a>
+
+                              <a href="{{route('blog')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700
+                              hover:text-gray-900 hover:bg-gray-50">News</a>
+                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                </div>
             </nav>
+
+            {{--Main desktop navigation--}}
             <nav class="f-f-l relative z-10">
                 <div class="relative z-10 mx-auto container hidden w-full px-4 xl:px-0 lg:flex justify-between items-center py-11">
                     <div>
@@ -77,12 +68,13 @@
                     </div>
                     <div class="flex items-center text-white text-lg font-bold">
                         <ul class="flex items-center pr-3 xl:pr-12">
-                            <li class="cursor-pointer hover:text-gray-300 ease-in"><a href="./home.html">Home</a></li>
-                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="./about-us.html">About Us</a></li>
-                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="./pricing
-                            .html">Contact Us</a></li>
-                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="./knowledge-base
-                            .html">News</a></li>
+                            <li class="cursor-pointer hover:text-gray-300 ease-in"><a href="{{route('home')}}">Home</a></li>
+                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="{{route('about')}}">About
+                                    Us</a></li>
+                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="{{route('contact')
+                            }}">Contact Us</a></li>
+                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="{{route('blog')
+                            }}">News</a></li>
                         </ul>
                         <button class="px-6 py-3 bg-white bg-linear-button text-white text-lg font-bold flex items-center justify-center">
                             Donate
@@ -93,6 +85,7 @@
                     </div>
                 </div>
             </nav>
+
             <div class="relative px-4 xl:px-0  container mx-auto md:flex items-center gap-8">
                 <div class="text-cyan-900 w-full md:w-1/3 pt-16 lg:pt-36">
                     <h1 class="text-5xl w-1/2 xl:w-full xl:text-7xl font-black f-f-l">
@@ -107,8 +100,7 @@
                     font-bold flex justify-center">Lend a hand
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 511.99906 511" style="enable-background:new 0 0 512 512"
                              xml:space="preserve" class="w-8 ml-4"><g><path xmlns="http://www.w3.org/2000/svg" d="m340.765625 348.707031
-                              122
-                             .171875-42c13.109375-4.730469 28.636719-.261719 35.257812 11.988281 8.992188 16.628907 1.121094 34.96875-14.148437 41.082032l-186.847656 82.269531c-15.28125 6.949219-31.871094 10.546875-48.652344 10.546875-21.296875 0-42.199219-5.789062-60.457031-16.75l-52.300782-31.378906c-12.070312-7.238282-31.761718-11.300782-45.789062-11.808594 0-.019531 0-140.058594 0-140.058594h79.167969c10.3125 0 20.441406 2.648438 29.421875 7.707032l52.839844 29.722656c3 1.6875 6.367187 2.570312 9.808593 2.570312h64.757813c16.570312 0 30 13.429688 30 30 0 11.199219-6.128906 20.957032-15.230469 26.109375zm0 0" fill="#ffcebf" data-original="#ffcebf" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m361.507812 10.5c38.417969 0 64.898438 32.25 64.898438 70.449219 0 50.546875-47.660156 84.386719-128.609375 154.546875-76.980469-66.71875-131.007813-101.707032-131.007813-154.546875 0-38.199219 26.480469-70.449219 64.910157-70.449219 49.320312 0 64.898437 56.246094 64.898437 56.246094s15.578125-56.246094 64.910156-56.246094zm0 0" fill="#ff80ac" data-original="#ff80ac" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m90 252.597656v140.058594c-.03125 11.019531-8.96875 19.9375-20 19.9375h-60v-179.996094h60c11.050781 0 20 8.949219 20 20zm0 0" fill="#faecd8" data-original="#faecd8" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m50 262.597656c-5.519531 0-10 4.480469-10 10 0 5.519532 4.480469 10 10 10s10-4.480468 10-10c0-5.519531-4.480469-10-10-10zm0 0" fill="#fffdfd" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m459.617188 297.273438-94.273438 32.410156c.417969-2.320313.652344-4.6875.652344-7.089844 0-22.054688-17.941406-40-40-40h-64.757813c-1.71875 0-3.414062-.441406-4.910156-1.285156l-52.832031-29.714844c-10.445313-5.886719-22.316406-9-34.328125-9h-70.890625c-4.125-11.636719-15.242188-19.996094-28.277344-19.996094h-60c-5.523438 0-10 4.476563-10 10v179.996094c0 5.523438 4.476562 10 10 10h60c12.738281 0 23.660156-8.003906 27.996094-19.246094 11.320312 1.40625 24.417968 4.753906 32.648437 9.691406l52.296875 31.378907c19.8125 11.890625 42.496094 18.175781 65.605469 18.175781 18.3125 0 36.054687-3.84375 52.738281-11.421875l186.644532-82.183594c20.671874-8.386719 30.878906-33.1875 19.0625-55.046875-8.691407-16.085937-29.046876-23.242187-47.375-16.667968zm-379.617188 95.367187c-.023438 5.492187-4.503906 9.953125-10 9.953125h-50v-159.996094h50c5.511719 0 10 4.484375 10 10zm400.332031-42.148437c-.105469.039062-.210937.085937-.316406.128906 0 0-186.921875 82.304687-186.957031 82.320312-14.082032 6.40625-29.058594 9.652344-44.511719 9.652344-19.484375 0-38.609375-5.296875-55.3125-15.324219l-52.300781-31.378906c-11.195313-6.714844-27.226563-10.808594-40.933594-12.449219v-120.84375h69.167969c8.578125 0 17.054687 2.21875 24.519531 6.425782l52.832031 29.714843c4.476563 2.523438 9.570313 3.859375 14.71875 3.859375h64.757813c11.027344 0 20 8.96875 20 20 0 10.988282-8.976563 20-20 20h-101.65625c-5.523438 0-10 4.476563-10 10 0 5.519532 4.476562 9.996094 10 9.996094h101.65625c6.558594 0 13.015625-1.628906 18.746094-4.683594 0 0 121.542968-41.78125 121.589843-41.796875 8.960938-3.234375 19.09375-.015625 23.066407 7.335938 5.957031 11.019531 1.03125 23-9.066407 27.042969zm0 0" fill="#fffdfd" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m291.246094 243.054688c1.882812 1.628906 4.214844 2.441406 6.550781 2.441406s4.671875-.8125 6.550781-2.441406c81.589844-70.710938 132.058594-106.496094 132.058594-162.105469 0-43.992188-31.144531-80.449219-74.898438-80.449219-28.734374 0-50.738281 16.5625-64.910156 41.417969-14.140625-24.800781-36.121094-41.417969-64.898437-41.417969-33.496094 0-61.5 21.707031-71.34375 55.296875-1.554688 5.300781 1.484375 10.855469 6.785156 12.410156 5.300781 1.554688 10.855469-1.484375 12.40625-6.785156 7.285156-24.859375 27.753906-40.921875 52.152344-40.921875 28.527343 0 48.539062 25.332031 55.261719 48.917969 1.199218 4.332031 5.144531 7.332031 9.636718 7.332031 4.496094 0 8.4375-3 9.636719-7.332031.136719-.488281 14.027344-48.917969 55.273437-48.917969 31.296876 0 54.898438 25.984375 54.898438 60.449219 0 44.484375-43.484375 76.554687-118.617188 141.335937-45.777343-39.3125-82.140624-66.984375-102.808593-94.054687-3.351563-4.390625-9.625-5.234375-14.015625-1.882813-4.390625 3.351563-5.230469 9.625-1.882813 14.019532 23.296875 30.511718 62.625 59.746093 112.164063 102.6875zm0 0" fill="#fffdfd" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m169 88.597656c-5.519531 0-10 4.480469-10 10 0 5.519532 4.480469 10 10 10s10-4.480468 10-10c0-5.519531-4.480469-10-10-10zm0 0" fill="#fffdfd" data-original="#000000" class=""></path></g></svg>
+                              122.171875-42c13.109375-4.730469 28.636719-.261719 35.257812 11.988281 8.992188 16.628907 1.121094 34.96875-14.148437 41.082032l-186.847656 82.269531c-15.28125 6.949219-31.871094 10.546875-48.652344 10.546875-21.296875 0-42.199219-5.789062-60.457031-16.75l-52.300782-31.378906c-12.070312-7.238282-31.761718-11.300782-45.789062-11.808594 0-.019531 0-140.058594 0-140.058594h79.167969c10.3125 0 20.441406 2.648438 29.421875 7.707032l52.839844 29.722656c3 1.6875 6.367187 2.570312 9.808593 2.570312h64.757813c16.570312 0 30 13.429688 30 30 0 11.199219-6.128906 20.957032-15.230469 26.109375zm0 0" fill="#ffcebf" data-original="#ffcebf" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m361.507812 10.5c38.417969 0 64.898438 32.25 64.898438 70.449219 0 50.546875-47.660156 84.386719-128.609375 154.546875-76.980469-66.71875-131.007813-101.707032-131.007813-154.546875 0-38.199219 26.480469-70.449219 64.910157-70.449219 49.320312 0 64.898437 56.246094 64.898437 56.246094s15.578125-56.246094 64.910156-56.246094zm0 0" fill="#ff80ac" data-original="#ff80ac" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m90 252.597656v140.058594c-.03125 11.019531-8.96875 19.9375-20 19.9375h-60v-179.996094h60c11.050781 0 20 8.949219 20 20zm0 0" fill="#faecd8" data-original="#faecd8" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m50 262.597656c-5.519531 0-10 4.480469-10 10 0 5.519532 4.480469 10 10 10s10-4.480468 10-10c0-5.519531-4.480469-10-10-10zm0 0" fill="#fffdfd" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m459.617188 297.273438-94.273438 32.410156c.417969-2.320313.652344-4.6875.652344-7.089844 0-22.054688-17.941406-40-40-40h-64.757813c-1.71875 0-3.414062-.441406-4.910156-1.285156l-52.832031-29.714844c-10.445313-5.886719-22.316406-9-34.328125-9h-70.890625c-4.125-11.636719-15.242188-19.996094-28.277344-19.996094h-60c-5.523438 0-10 4.476563-10 10v179.996094c0 5.523438 4.476562 10 10 10h60c12.738281 0 23.660156-8.003906 27.996094-19.246094 11.320312 1.40625 24.417968 4.753906 32.648437 9.691406l52.296875 31.378907c19.8125 11.890625 42.496094 18.175781 65.605469 18.175781 18.3125 0 36.054687-3.84375 52.738281-11.421875l186.644532-82.183594c20.671874-8.386719 30.878906-33.1875 19.0625-55.046875-8.691407-16.085937-29.046876-23.242187-47.375-16.667968zm-379.617188 95.367187c-.023438 5.492187-4.503906 9.953125-10 9.953125h-50v-159.996094h50c5.511719 0 10 4.484375 10 10zm400.332031-42.148437c-.105469.039062-.210937.085937-.316406.128906 0 0-186.921875 82.304687-186.957031 82.320312-14.082032 6.40625-29.058594 9.652344-44.511719 9.652344-19.484375 0-38.609375-5.296875-55.3125-15.324219l-52.300781-31.378906c-11.195313-6.714844-27.226563-10.808594-40.933594-12.449219v-120.84375h69.167969c8.578125 0 17.054687 2.21875 24.519531 6.425782l52.832031 29.714843c4.476563 2.523438 9.570313 3.859375 14.71875 3.859375h64.757813c11.027344 0 20 8.96875 20 20 0 10.988282-8.976563 20-20 20h-101.65625c-5.523438 0-10 4.476563-10 10 0 5.519532 4.476562 9.996094 10 9.996094h101.65625c6.558594 0 13.015625-1.628906 18.746094-4.683594 0 0 121.542968-41.78125 121.589843-41.796875 8.960938-3.234375 19.09375-.015625 23.066407 7.335938 5.957031 11.019531 1.03125 23-9.066407 27.042969zm0 0" fill="#fffdfd" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m291.246094 243.054688c1.882812 1.628906 4.214844 2.441406 6.550781 2.441406s4.671875-.8125 6.550781-2.441406c81.589844-70.710938 132.058594-106.496094 132.058594-162.105469 0-43.992188-31.144531-80.449219-74.898438-80.449219-28.734374 0-50.738281 16.5625-64.910156 41.417969-14.140625-24.800781-36.121094-41.417969-64.898437-41.417969-33.496094 0-61.5 21.707031-71.34375 55.296875-1.554688 5.300781 1.484375 10.855469 6.785156 12.410156 5.300781 1.554688 10.855469-1.484375 12.40625-6.785156 7.285156-24.859375 27.753906-40.921875 52.152344-40.921875 28.527343 0 48.539062 25.332031 55.261719 48.917969 1.199218 4.332031 5.144531 7.332031 9.636718 7.332031 4.496094 0 8.4375-3 9.636719-7.332031.136719-.488281 14.027344-48.917969 55.273437-48.917969 31.296876 0 54.898438 25.984375 54.898438 60.449219 0 44.484375-43.484375 76.554687-118.617188 141.335937-45.777343-39.3125-82.140624-66.984375-102.808593-94.054687-3.351563-4.390625-9.625-5.234375-14.015625-1.882813-4.390625 3.351563-5.230469 9.625-1.882813 14.019532 23.296875 30.511718 62.625 59.746093 112.164063 102.6875zm0 0" fill="#fffdfd" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m169 88.597656c-5.519531 0-10 4.480469-10 10 0 5.519532 4.480469 10 10 10s10-4.480468 10-10c0-5.519531-4.480469-10-10-10zm0 0" fill="#fffdfd" data-original="#000000" class=""></path></g></svg>
                     </button>
                 </div>
                 <img class="w-full mt-8 md:mt-0 object-fill md:w-2/3 md:-ml-4 lg:-ml-4 xl:ml-0" src="https://i.ibb.co/9GMTkW3/desktop.png" />
@@ -455,30 +447,4 @@
           </div>
         </div>
 
-        <div class="bg-linear-pink-invert pb-12">
-            <div class="mx-auto container pt-20 lg:pt-72 flex flex-col items-center justify-center">
-                <div>
-                     <img src="{{asset('images/logo-icon.svg')}}" class="w-[150px]" alt="">
-                </div>
-                <div class="text-cyan-900 flex flex-col md:items-center f-f-l pt-3">
-                    <h1 class="text-2xl font-black">Care. Support. Repeat.</h1>
-
-                    <div class="my-6 text-base text-color f-f-l">
-                        <ul class="md:flex items-center">
-                            <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">About</li>
-                            <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">Contact Us</li>
-                            <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">Blog</li>
-                            <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">Gallery</li>
-                            <li class="cursor-pointer pt-4 lg:py-0">Code of Honor</li>
-                        </ul>
-                    </div>
-                    <div class="text-sm text-color mb-10 f-f-l">
-                        <p>© {{date('Y')}} Beth Rapha Cancer Foundation. All rights reserved</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <script src="{{asset('js/app.js')}}" defer></script>
-    </body>
-</html>
+</x-site-layout>
