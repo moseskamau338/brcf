@@ -1,132 +1,484 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
-
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="{{mix('css/app.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/custom.css')}}" />
+        <title>Home</title>
     </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
+    <body>
+        <div class="relative w-full h-full">
+            <div class="hidden md:block">
+                <img class="absolute bg-cover bg-center w-full h-full inset-0" src="https://cdn.tuk.dev/assets/templates/prodify/background.png" alt="" />
+            </div>
+            <div class="md:hidden">
+                <!-- <img class="absolute bg-cover bg-center w-full h-full inset-0" src="https://cdn.tuk.dev/assets/templates/prodify/backgroundMobile.png" alt="" /> -->
+            </div>
+            <nav class="lg:hidden relative z-50">
+                <div class="flex py-2 justify-between items-center px-4">
+                    <div>
+                        <img src="{{asset('images/logo.png')}}" class="w-1/4" alt="">
+                    </div>
+                    <div class="visible flex items-center">
+                        <ul id="list" class="hidden p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-24">
+                            <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                                <a href="./home.html">
+                                    <span class="ml-2 font-bold">Home</span>
+                                </a>
+                            </li>
+                            <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center" onclick="dropdownHandler(this)">
+                                <a href="./about-us.html">
+                                    <span class="ml-2 font-bold">About Us</span>
+                                </a>
+                            </li>
+                            <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                                <a href="./pricing.html">
+                                    <span class="ml-2 font-bold">Contact Us</span>
+                                </a>
+                            </li>
+                            <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center" onclick="dropdownHandler(this)">
+                                <a href="./knowledge-base.html">
+                                    <span class="ml-2 font-bold">Blog</span>
+                                </a>
+                            </li>
+                            <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center" onclick="dropdownHandler(this)">
+                                <a href="/">
+                                    <span class="ml-2 font-bold">Donate</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="xl:hidden">
+                            <svg id="open" onclick="MenuHandler(true)" aria-haspopup="true" aria-label="Main Menu" xmlns="http://www.w3.org/2000/svg" class="show-m-menu icon icon-tabler icon-tabler-menu" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z"></path>
+                                <line x1="4" y1="8" x2="20" y2="8"></line>
+                                <line x1="4" y1="16" x2="20" y2="16"></line>
+                            </svg>
+                            <div id="close" class="hidden close-m-menu" onclick="MenuHandler(false)">
+                                <svg aria-label="Close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <line x1="18" y1="6" x2="6" y2="18" />
+                                    <line x1="6" y1="6" x2="18" y2="18" />
+                                </svg>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
+            </nav>
+            <nav class="f-f-l relative z-10">
+                <div class="relative z-10 mx-auto container hidden w-full px-4 xl:px-0 lg:flex justify-between items-center py-11">
+                    <div>
+                        <img src="{{asset('images/logo.svg')}}" class="w-1/4 absolute" alt="">
                     </div>
+                    <div class="flex items-center text-white text-lg font-bold">
+                        <ul class="flex items-center pr-3 xl:pr-12">
+                            <li class="cursor-pointer hover:text-gray-300 ease-in"><a href="./home.html">Home</a></li>
+                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="./about-us.html">About Us</a></li>
+                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="./pricing
+                            .html">Contact Us</a></li>
+                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="./knowledge-base
+                            .html">News</a></li>
+                        </ul>
+                        <button class="px-6 py-3 bg-white bg-linear-button text-white text-lg font-bold flex items-center justify-center">
+                            Donate
+                            <svg class="ml-4" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M9.129 5.24952L5.106 1.22652L6.1665 0.166016L12 5.99952L6.1665 11.833L5.106 10.7725L9.129 6.74952H0V5.24952H9.129Z" fill="white" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="relative px-4 xl:px-0  container mx-auto md:flex items-center gap-8">
+                <div class="text-cyan-900 w-full md:w-1/3 pt-16 lg:pt-36">
+                    <h1 class="text-5xl w-1/2 xl:w-full xl:text-7xl font-black f-f-l">
+                        We are a safe haven
+                        <span class="text-gray-500">for cancer patients</span>
 
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                    </h1>
+                    <div class="f-f-r text-xl lg:text-3xl pt-10  xl:pt-20">
+                        <h2>Help us provide a dignified and safe accommodation for cancer patients seeking treatment in Kenya.</h2>
+                    </div>
+                    <button class="text-xl w-full xl:text-3xl xl:w-11/12 mt-4 xl:mt-11 f-f-r py-6 bg-linear-button-home text-white
+                    font-bold flex justify-center">Lend a hand
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 511.99906 511" style="enable-background:new 0 0 512 512"
+                             xml:space="preserve" class="w-8 ml-4"><g><path xmlns="http://www.w3.org/2000/svg" d="m340.765625 348.707031
+                              122
+                             .171875-42c13.109375-4.730469 28.636719-.261719 35.257812 11.988281 8.992188 16.628907 1.121094 34.96875-14.148437 41.082032l-186.847656 82.269531c-15.28125 6.949219-31.871094 10.546875-48.652344 10.546875-21.296875 0-42.199219-5.789062-60.457031-16.75l-52.300782-31.378906c-12.070312-7.238282-31.761718-11.300782-45.789062-11.808594 0-.019531 0-140.058594 0-140.058594h79.167969c10.3125 0 20.441406 2.648438 29.421875 7.707032l52.839844 29.722656c3 1.6875 6.367187 2.570312 9.808593 2.570312h64.757813c16.570312 0 30 13.429688 30 30 0 11.199219-6.128906 20.957032-15.230469 26.109375zm0 0" fill="#ffcebf" data-original="#ffcebf" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m361.507812 10.5c38.417969 0 64.898438 32.25 64.898438 70.449219 0 50.546875-47.660156 84.386719-128.609375 154.546875-76.980469-66.71875-131.007813-101.707032-131.007813-154.546875 0-38.199219 26.480469-70.449219 64.910157-70.449219 49.320312 0 64.898437 56.246094 64.898437 56.246094s15.578125-56.246094 64.910156-56.246094zm0 0" fill="#ff80ac" data-original="#ff80ac" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m90 252.597656v140.058594c-.03125 11.019531-8.96875 19.9375-20 19.9375h-60v-179.996094h60c11.050781 0 20 8.949219 20 20zm0 0" fill="#faecd8" data-original="#faecd8" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m50 262.597656c-5.519531 0-10 4.480469-10 10 0 5.519532 4.480469 10 10 10s10-4.480468 10-10c0-5.519531-4.480469-10-10-10zm0 0" fill="#fffdfd" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m459.617188 297.273438-94.273438 32.410156c.417969-2.320313.652344-4.6875.652344-7.089844 0-22.054688-17.941406-40-40-40h-64.757813c-1.71875 0-3.414062-.441406-4.910156-1.285156l-52.832031-29.714844c-10.445313-5.886719-22.316406-9-34.328125-9h-70.890625c-4.125-11.636719-15.242188-19.996094-28.277344-19.996094h-60c-5.523438 0-10 4.476563-10 10v179.996094c0 5.523438 4.476562 10 10 10h60c12.738281 0 23.660156-8.003906 27.996094-19.246094 11.320312 1.40625 24.417968 4.753906 32.648437 9.691406l52.296875 31.378907c19.8125 11.890625 42.496094 18.175781 65.605469 18.175781 18.3125 0 36.054687-3.84375 52.738281-11.421875l186.644532-82.183594c20.671874-8.386719 30.878906-33.1875 19.0625-55.046875-8.691407-16.085937-29.046876-23.242187-47.375-16.667968zm-379.617188 95.367187c-.023438 5.492187-4.503906 9.953125-10 9.953125h-50v-159.996094h50c5.511719 0 10 4.484375 10 10zm400.332031-42.148437c-.105469.039062-.210937.085937-.316406.128906 0 0-186.921875 82.304687-186.957031 82.320312-14.082032 6.40625-29.058594 9.652344-44.511719 9.652344-19.484375 0-38.609375-5.296875-55.3125-15.324219l-52.300781-31.378906c-11.195313-6.714844-27.226563-10.808594-40.933594-12.449219v-120.84375h69.167969c8.578125 0 17.054687 2.21875 24.519531 6.425782l52.832031 29.714843c4.476563 2.523438 9.570313 3.859375 14.71875 3.859375h64.757813c11.027344 0 20 8.96875 20 20 0 10.988282-8.976563 20-20 20h-101.65625c-5.523438 0-10 4.476563-10 10 0 5.519532 4.476562 9.996094 10 9.996094h101.65625c6.558594 0 13.015625-1.628906 18.746094-4.683594 0 0 121.542968-41.78125 121.589843-41.796875 8.960938-3.234375 19.09375-.015625 23.066407 7.335938 5.957031 11.019531 1.03125 23-9.066407 27.042969zm0 0" fill="#fffdfd" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m291.246094 243.054688c1.882812 1.628906 4.214844 2.441406 6.550781 2.441406s4.671875-.8125 6.550781-2.441406c81.589844-70.710938 132.058594-106.496094 132.058594-162.105469 0-43.992188-31.144531-80.449219-74.898438-80.449219-28.734374 0-50.738281 16.5625-64.910156 41.417969-14.140625-24.800781-36.121094-41.417969-64.898437-41.417969-33.496094 0-61.5 21.707031-71.34375 55.296875-1.554688 5.300781 1.484375 10.855469 6.785156 12.410156 5.300781 1.554688 10.855469-1.484375 12.40625-6.785156 7.285156-24.859375 27.753906-40.921875 52.152344-40.921875 28.527343 0 48.539062 25.332031 55.261719 48.917969 1.199218 4.332031 5.144531 7.332031 9.636718 7.332031 4.496094 0 8.4375-3 9.636719-7.332031.136719-.488281 14.027344-48.917969 55.273437-48.917969 31.296876 0 54.898438 25.984375 54.898438 60.449219 0 44.484375-43.484375 76.554687-118.617188 141.335937-45.777343-39.3125-82.140624-66.984375-102.808593-94.054687-3.351563-4.390625-9.625-5.234375-14.015625-1.882813-4.390625 3.351563-5.230469 9.625-1.882813 14.019532 23.296875 30.511718 62.625 59.746093 112.164063 102.6875zm0 0" fill="#fffdfd" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m169 88.597656c-5.519531 0-10 4.480469-10 10 0 5.519532 4.480469 10 10 10s10-4.480468 10-10c0-5.519531-4.480469-10-10-10zm0 0" fill="#fffdfd" data-original="#000000" class=""></path></g></svg>
+                    </button>
+                </div>
+                <img class="w-full mt-8 md:mt-0 object-fill md:w-2/3 md:-ml-4 lg:-ml-4 xl:ml-0" src="https://i.ibb.co/9GMTkW3/desktop.png" />
+            </div>
+        </div>
+        <div class="mx-auto container px-4 xl:px-0 py-10 xl:py-40">
+            <div class="">
+                <div class="flex flex-wrap items-center">
+                    <div class="lg:w-2/5 w-full">
+                        <img class="w-full rounded-lg shadow-xl" src="{{asset('images/treatment.png')}}" alt="" srcset="" />
+                    </div>
+                    <div class="lg:w-3/5 w-full">
+                        <div class="lg:pl-8 py-2 text-color">
+                            <h1 class="text-3xl text-cyan-900 xl:text-6xl leading-snug f-f-l font-black">Treatments should not be worse
+                                than they already are
+                            </h1>
+                            <h2 class="text-xl text-cyan-900 lg:text-3xl leading-7 lg:leading-10 f-f-r py-4 lg:py-8">When a cancer patient has to
+                                struggle with a place to find accommodation during treatment, then their burden with cancer becomes
+                                tenfold. <b>Beth Rapha cancer foundation</b> seeks to alleviate this by providing <b>dignified
+                                    accommodation</b> to cancer patients <b>who have no place to stay during their period of treatment</b> .</h2>
+                            <div class="flex items-center">
+                                <div class="pl-3">
+                                    <h3 class="f-f-l text-xl italic lg:text-3xl">Management</h3>
+                                    <h4 class="f-f-r text-lg italic pt-2">@BRCF</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="bg-linear-pink">
+            <div class="px-4 xl:px-0">
+                <div class="container mx-auto">
+{{--                    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:pb-10">--}}
+{{--                        <div class="bg-white px-6 py-6 text-color f-f-l shadow-lg mt-10 xl:-mt-20">--}}
+{{--                            <h1 class="text-3xl font-bold w-1/2">Download the app</h1>--}}
+{{--                            <div class="flex justify-end w-full items-end">--}}
+{{--                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">--}}
+{{--                                    <path--}}
+{{--                                        d="M26 26.0001V37.1701L29.656 33.5141L32.486 36.3441L24 44.8281L15.514 36.3441L18.344 33.5141L22 37.1701V26.0001H26ZM24 4.00012C27.434 4.00029 30.7482 5.26235 33.3124 7.54636C35.8767 9.83037 37.5122 12.977 37.908 16.3881C40.3966 17.0668 42.5675 18.5983 44.0414 20.7152C45.5152 22.832 46.1983 25.3995 45.9713 27.9689C45.7442 30.5383 44.6214 32.9462 42.7992 34.7718C40.9769 36.5973 38.571 37.7244 36.002 37.9561L36 34.0001C36.0032 30.8544 34.771 27.8332 32.5687 25.587C30.3665 23.3408 27.3702 22.0492 24.2251 21.9902C21.0799 21.9312 18.0374 23.1096 15.7524 25.2716C13.4675 27.4337 12.1228 30.4065 12.008 33.5501L12 34.0001V37.9561C9.43093 37.7248 7.02484 36.5979 5.2023 34.7725C3.37976 32.9471 2.25669 30.5392 2.02938 27.9698C1.80207 25.4003 2.48499 22.8327 3.95877 20.7157C5.43255 18.5987 7.60345 17.0669 10.092 16.3881C10.4874 12.9769 12.1228 9.82994 14.6872 7.54585C17.2515 5.26176 20.5659 3.99985 24 4.00012Z"--}}
+{{--                                        fill="url(#paint0_linear)"--}}
+{{--                                    />--}}
+{{--                                    <defs>--}}
+{{--                                        <linearGradient id="paint0_linear" x1="24.0003" y1="4.00012" x2="24.0003" y2="44.8281" gradientUnits="userSpaceOnUse">--}}
+{{--                                            <stop stop-color="#F56565" />--}}
+{{--                                            <stop offset="1" stop-color="#D53F8C" />--}}
+{{--                                        </linearGradient>--}}
+{{--                                    </defs>--}}
+{{--                                </svg>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="bg-white px-6 py-6 text-color f-f-l shadow-lg mt-10 xl:-mt-20">--}}
+{{--                            <h1 class="text-3xl font-bold w-1/2">Effortless onboarding</h1>--}}
+{{--                            <div class="flex justify-end w-full items-end">--}}
+{{--                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">--}}
+{{--                                    <path--}}
+{{--                                        d="M40 40C40 40.5304 39.7893 41.0391 39.4142 41.4142C39.0391 41.7892 38.5304 42 38 42H10C9.46957 42 8.96086 41.7892 8.58579 41.4142C8.21071 41.0391 8 40.5304 8 40V22H2L22.654 3.22396C23.0222 2.88892 23.5022 2.70325 24 2.70325C24.4978 2.70325 24.9778 2.88892 25.346 3.22396L46 22H40V40ZM15 26C15 28.3869 15.9482 30.6761 17.636 32.3639C19.3239 34.0518 21.6131 35 24 35C26.3869 35 28.6761 34.0518 30.364 32.3639C32.0518 30.6761 33 28.3869 33 26H29C29 27.326 28.4732 28.5978 27.5355 29.5355C26.5979 30.4732 25.3261 31 24 31C22.6739 31 21.4021 30.4732 20.4645 29.5355C19.5268 28.5978 19 27.326 19 26H15Z"--}}
+{{--                                        fill="url(#paint0_linear)"--}}
+{{--                                    />--}}
+{{--                                    <defs>--}}
+{{--                                        <linearGradient id="paint0_linear" x1="24" y1="2.70325" x2="24" y2="42" gradientUnits="userSpaceOnUse">--}}
+{{--                                            <stop stop-color="#F56565" />--}}
+{{--                                            <stop offset="1" stop-color="#D53F8C" />--}}
+{{--                                        </linearGradient>--}}
+{{--                                    </defs>--}}
+{{--                                </svg>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="bg-white px-6 py-6 text-color f-f-l shadow-lg mt-10 xl:-mt-20">--}}
+{{--                            <h1 class="text-3xl font-bold w-10/12">Access from anywhere</h1>--}}
+{{--                            <div class="flex justify-end w-full items-end">--}}
+{{--                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">--}}
+{{--                                    <path--}}
+{{--                                        d="M38 12H22C21.4696 12 20.9609 12.2107 20.5858 12.5858C20.2107 12.9609 20 13.4696 20 14V40H8C7.46957 40 6.96086 39.7893 6.58579 39.4142C6.21071 39.0391 6 38.5304 6 38V6C6 5.46957 6.21071 4.96086 6.58579 4.58579C6.96086 4.21071 7.46957 4 8 4H36C36.5304 4 37.0391 4.21071 37.4142 4.58579C37.7893 4.96086 38 5.46957 38 6V12ZM26 16H42C42.5304 16 43.0391 16.2107 43.4142 16.5858C43.7893 16.9609 44 17.4696 44 18V42C44 42.5304 43.7893 43.0391 43.4142 43.4142C43.0391 43.7893 42.5304 44 42 44H26C25.4696 44 24.9609 43.7893 24.5858 43.4142C24.2107 43.0391 24 42.5304 24 42V18C24 17.4696 24.2107 16.9609 24.5858 16.5858C24.9609 16.2107 25.4696 16 26 16Z"--}}
+{{--                                        fill="url(#paint0_linear)"--}}
+{{--                                    />--}}
+{{--                                    <defs>--}}
+{{--                                        <linearGradient id="paint0_linear" x1="25" y1="4" x2="25" y2="44" gradientUnits="userSpaceOnUse">--}}
+{{--                                            <stop stop-color="#F56565" />--}}
+{{--                                            <stop offset="1" stop-color="#D53F8C" />--}}
+{{--                                        </linearGradient>--}}
+{{--                                    </defs>--}}
+{{--                                </svg>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="bg-white px-6 py-6 text-color f-f-l shadow-lg mt-10 xl:-mt-20">--}}
+{{--                            <h1 class="text-3xl font-bold w-9/12">Build & ship rapidly</h1>--}}
+{{--                            <div class="flex justify-end w-full items-end">--}}
+{{--                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">--}}
+{{--                                    <path d="M12.91 38L4 45V8C4 7.46957 4.21071 6.96086 4.58579 6.58579C4.96086 6.21071 5.46957 6 6 6H42C42.5304 6 43.0391 6.21071 43.4142 6.58579C43.7893 6.96086 44 7.46957 44 8V36C44 36.5304 43.7893 37.0391 43.4142 37.4142C43.0391 37.7893 42.5304 38 42 38H12.91ZM22.586 24.242L17.636 19.292L14.808 22.122L22.586 29.9L33.9 18.586L31.072 15.758L22.586 24.242Z" fill="url(#paint0_linear)" />--}}
+{{--                                    <defs>--}}
+{{--                                        <linearGradient id="paint0_linear" x1="24" y1="6" x2="24" y2="45" gradientUnits="userSpaceOnUse">--}}
+{{--                                            <stop stop-color="#F56565" />--}}
+{{--                                            <stop offset="1" stop-color="#D53F8C" />--}}
+{{--                                        </linearGradient>--}}
+{{--                                    </defs>--}}
+{{--                                </svg>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+                    <div class="pt-10 lg:pt-40">
+                        <div class="container mx-auto">
+                            <div class="flex flex-col-reverse flex-col lg:flex-row  items-center">
+                                <div class="lg:w-2/3 mt-24 lg:mt-0 w-full xl:pr-20">
+                                    <div class="py-2 text-color">
+                                        <h1 class="text-2xl text-cyan-900 lg:text-6xl lg:leading-snug tracking-tighter f-f-l font-black">What drives
+                                            us?</h1>
+                                        <h2 class="text-lg lg:text-3xl leading-7 text-cyan-900 lg:leading-10 f-f-r py-4 lg:py-8"><b>Beth Rapha cancer
+                                            foundation</b> was
+                                            officially registered on 29th June 2021 as a Non Governmental Organization. The foundation works towards providing a dignified accommodation for cancer patients seeking treatment and with limited capacities to find their own accommodation.
+</h2>
+                                        <div class="flex items-center cursor-pointer">
+                                            <h3 class="f-f-r text-2xl font-semibold underline text-color-pink">More about us</h3>
+                                            <div class="pl-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M13.1719 12L8.22192 7.04999L9.63592 5.63599L15.9999 12L9.63592 18.364L8.22192 16.95L13.1719 12Z" fill="#D53F8C" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:w-1/3 w-full relative min-height-images flex items-end justify-center">
+                                    <img class="absolute w-full h-full inset-0 object-cover object-center rounded-xl" src="{{asset
+                                    ('images/visitation_slum.jpg')}}" alt="" />
+                                    <div class="relative z-10 bg-white rounded shadow-lg p-6 w-10/12 -mb-20">
+                                        <div class="flex items-center justify-between w-full sm:w-full mb-4">
+                                            <div class="flex items-center">
+
+                                                <div class="ml-6">
+                                                    <h3 class="mb-1 leading-5 text-cyan-900 font-bold text-2xl">We do 5 visits to needy
+                                                        cancer patients every week
+                                                    </h3>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                                <button class="text-sm w-1/2 mt-4 f-f-r py-2
+                                                bg-linear-button-home text-white font-bold">Become a volunteer</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="relative py-20 overflow-hidden bg-transparent">
+                        <span class="absolute top-0 right-0 flex flex-col items-end mt-0 -mr-16 opacity-60">
+                            <span class="container hidden w-screen h-32 max-w-xs mt-20 transform rounded-full rounded-r-none md:block md:max-w-xs lg:max-w-lg 2xl:max-w-3xl bg-blue-50"></span>
+                        </span>
+
+                        <span class="absolute bottom-0 left-0"> </span>
+
+                        <div class="relative px-16 mx-auto max-w-7xl">
+                            <p class="font-medium tracking-wide text-blue-500 uppercase">OUR TEAM</p>
+                            <h2 class="relative max-w-lg mt-5 mb-10 text-4xl text-cyan-900 font-semibold leading-tight lg:text-5xl">An incredibly
+                                dedicated<br> team of individuals</h2>
+                            <div class="grid w-full grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-4">
+                                @php
+                                    $members = [
+                                        ['name'=>'Dr. Odhiambo Mbati','description'=>'Doctor', 'image'=>'images/team/Dr_Odhiambo_Bati.png'],
+                                        ['name'=>'Pricilla Okindo','description'=>'Doctor', 'image'=>'images/team/Priscilla_Okindo.png'],
+                                        ['name'=>'Ronnie Midigo','description'=>'Doctor', 'image'=>'images/team/Ronnie_Midigo.png'],
+                                        ['name'=>'Wilson Mosbey','description'=>'Doctor', 'image'=>'images/team/wilson_mosbey.png'],
+                                    ];
+                                @endphp
+                                @foreach($members as $member)
+
+                                    <div class="flex flex-col items-center justify-center col-span-1">
+                                        <div class="relative p-5">
+                                            <div class="absolute shadow-xl z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none
+                                            bg-pink-400"></div>
+                                            <img class="relative z-20 w-full rounded-full" src="{{asset($member['image'])}}">
+                                        </div>
+                                        <div class="mt-3 space-y-2 text-center">
+                                            <div class="space-y-1 text-lg font-medium leading-6">
+                                                <h3>{{$member['name']}}</h3>
+                                                   <p class="text-blue-600">{{$member['description']}}</p>
+                                            </div>
+                                            <div class="relative flex items-center justify-center space-x-3">
+                                                <a href="#_" class="text-gray-300 hover:text-gray-400">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+                                                </a>
+                                                <a href="#_" class="text-gray-300 hover:text-gray-400">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="flex items-center justify-center my-12 py-0 bg-white bg-gradient-to-br from-cyan-900 via-cyan-800
+                    to-pink-400 min-w-screen">
+                        <div class="relative flex flex-col items-center w-full max-w-6xl px-4 py-8 mx-auto text-center lg:text-left lg:block sm:px-6 md:pb-0 md:pt-12 lg:px-12 lg:py-12">
+                            <h2 class="my-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl lg:my-0 xl:text-4xl sm:leading-tight">
+                                Volunteer today <span class="block text-indigo-200 xl:inline">and change the world</span>
+                            </h2>
+                            <p class="mt-1 mb-10 text-sm font-medium text-indigo-200 xl:text-base xl:tracking-wider lg:mb-0">
+                                We have plenty of activities, keep you engaged and fulfilled. follow the link below to signup.
+                            </p>
+                            <div class="flex mb-8 lg:mt-6 lg:mb-0">
+                                <div class="inline-flex">
+                                    <a href="#_" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-indigo-700 transition duration-150 ease-in-out bg-indigo-100 border border-transparent rounded-md hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-indigo-300">
+                                        Sign Up Today
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="bottom-0 -right-20 mb-0 mr-3 lg:absolute lg:-mb-2 overflow-hidden">
+                                <img src="{{asset('images/hands.png')}}" class="max-w-xs mb-0 opacity-80 md:max-w-2xl lg:max-w-lg xl:mb-0
+                                xl:max-w-md">
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="relative w-full bg-white">
+                        <div class="absolute w-full h-32 bg-gradient-to-b from-gray-100 to-white"></div>
+                        <div class="relative w-full px-5 py-10 mx-auto sm:py-12 md:py-16 md:px-10 max-w-7xl">
+
+                            <h1 class="mb-1 text-4xl font-extrabold leading-none text-cyan-900 lg:text-5xl xl:text-6xl sm:mb-3"><a
+                                    href="#_">Upcoming Events</a></h1>
+                            <p class="text-lg font-medium text-gray-500 sm:text-2xl">Designs and layouts to help you with your app.</p>
+                            <div class="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
+                                <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
+                                    <a href="#_" class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover
+                                    h-96 hover:scale-110" style="background-image:url('/images/care.jpg')">
+                                    </a>
+                                    <div class="relative z-20 w-full h-auto py-8 text-white bg-white bg-gradient-to-br from-cyan-900 via-cyan-800
+                    to-pink-400 border-t-0 border-yellow-200 px-7">
+                                        <a href="#_" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4
+                                        py-2 uppercase text-purple-500 bg-white">Training</a>
+                                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Home Care Seminar</a></h2>
+                                        <p class="mb-2 text-lg font-normal text-purple-100 opacity-100">How do give your best in caring
+                                            for a sick loved one at home?</p>
+
+                                    </div>
+                                </div>
+
+                                <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
+                                    <a href="#_" class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover
+                                    h-96 hover:scale-110" style="background-image:url('/images/health.jpg')">
+                                    </a>
+                                    <div class="relative z-20 w-full h-auto py-8 text-white bg-white bg-gradient-to-br from-cyan-900 via-cyan-800
+                    to-pink-400 border-t-0 border-yellow-200 px-7">
+                                        <a href="#_" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4
+                                        py-2 uppercase text-purple-500 bg-white">Training</a>
+                                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Healthy Living Seminar</a></h2>
+                                        <p class="mb-2 text-lg font-normal text-purple-100 opacity-100">Learn how you can improve your
+                                            health by using God-given solutions at home...</p>
+
+                                    </div>
+                                </div>
+
+                                <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
+                                    <a href="#_" class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover
+                                    h-96 hover:scale-110" style="background-image:url('/images/fund.jpg')">
+                                    </a>
+                                    <div class="relative z-20 w-full h-auto py-8 text-white bg-white bg-gradient-to-br from-cyan-900 via-cyan-800
+                    to-pink-400 border-t-0 border-yellow-200 px-7">
+                                        <a href="#_" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4
+                                        py-2 uppercase text-purple-500 bg-white">Training</a>
+                                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Fund Raising Ceremony</a></h2>
+                                        <p class="mb-2 text-lg font-normal text-purple-100 opacity-100">We need to raise money for our
+                                            building project, please support us with prayer and means</p>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </section>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto px-4 xl:px-0 container pt-10 lg:pt-56">
+            <div class="text-color f-f-l">
+                <h1 class="text-xl lg:text-6xl text-cyan-900 tracking-tighter leading-relaxed lg:leading-snug f-f-l font-black text-center">
+                    "God bless Beth Rapha Cancer Foundation <br>
+                    I had come from far for treatments and were <br>
+                    it not for you guys, I could have spent several nights in the cold"
+                </h1>
+                <h1 class="text-color-gradient text-xl lg:text-6xl tracking-tighter leading-relaxed lg:leading-snug f-f-l font-black text-center pt-5 lg:pt-20">- Ben P.</h1>
+            </div>
+        </div>
+        <div class="mx-auto container py-20 lg:pt-44 lg:pb-52">
+            <div class="px-4 xl:px-0">
+                <h4 class="text-cyan-900 text-5xl mb-8">Since 2021:</h4>
+                <div class="xl:flex items-center justify-between w-full text-color">
+                    <div class="flex flex-col items-center xl:block py-4 xl:py-0">
+                        <h1 class="text-6xl text-cyan-900 font-black f-f-l">15+</h1>
+                        <h2 class="f-f-r text-color-lighter text-3xl pt-5">Homes Built</h2>
+                    </div>
+                    <div class="flex flex-col items-center xl:block py-4 xl:py-0">
+                        <h1 class="text-6xl text-cyan-900 font-black f-f-l">30</h1>
+                        <h2 class="f-f-r text-color-lighter text-3xl pt-5">Lives touched</h2>
+                    </div>
+                    <div class="flex flex-col items-center xl:block py-4 xl:py-0">
+                        <h1 class="text-6xl text-cyan-900 font-black f-f-l">78</h1>
+                        <h2 class="f-f-r text-color-lighter text-3xl pt-5">Regular events</h2>
+                    </div>
+                    <div class="flex flex-col items-center xl:block py-4 xl:py-0">
+                        <h1 class="text-6xl text-cyan-900 font-black f-f-l">4</h1>
+                        <h2 class="f-f-r text-color-lighter text-3xl pt-5">Team Members</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <div class="py-0 bg-white md:py-8 lg:py-12">
+          <div class="mx-auto max-w-7xl md:px-8">
+            <div class="flex flex-col overflow-hidden shadow-xl md:h-auto md:flex-row bg-white bg-gradient-to-br from-cyan-900
+             via-pink-500 to-pink-400 md:rounded-xl">
+              <!-- Left Content -->
+              <div class="flex flex-col w-full p-12 md:w-1/2 lg:w-2/5 md:p-16">
+                <h2 class="text-3xl font-bold text-left text-white md:text-4xl lg:text-5xl mb-7">
+                    Putting a smile on someone's face is our joy
+                </h2>
+
+                <p class="mb-12 text-2xl text-left text-white md:max-w-md">
+                 That's why we wake up every day and do it!
+                </p>
+
+                <div class="mt-auto">
+                  <a href="#" class="inline-block w-full px-10 py-5 text-lg font-semibold text-center text-gray-800 transition
+                  duration-100 bg-white rounded-lg outline-none hover:bg-gray-100 active:bg-gray-200 focus-visible:ring ring-indigo-300
+                  md:w-auto md:text-xl">Join the team</a>
+                </div>
+              </div>
+
+              <!-- Start right image -->
+              <div class="order-first w-full h-56 bg-gray-700 bg-center bg-cover md:w-1/2 lg:w-3/5 md:h-auto md:order-none"
+                   style="background-image:url('images/happy.png')"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-linear-pink-invert pb-12">
+            <div class="mx-auto container pt-20 lg:pt-72 flex flex-col items-center justify-center">
+                <div>
+                     <img src="{{asset('images/logo-icon.svg')}}" class="w-[150px]" alt="">
+                </div>
+                <div class="text-cyan-900 flex flex-col md:items-center f-f-l pt-3">
+                    <h1 class="text-2xl font-black">Care. Support. Repeat.</h1>
+
+                    <div class="my-6 text-base text-color f-f-l">
+                        <ul class="md:flex items-center">
+                            <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">About</li>
+                            <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">Contact Us</li>
+                            <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">Blog</li>
+                            <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">Gallery</li>
+                            <li class="cursor-pointer pt-4 lg:py-0">Code of Honor</li>
+                        </ul>
+                    </div>
+                    <div class="text-sm text-color mb-10 f-f-l">
+                        <p>© {{date('Y')}} Beth Rapha Cancer Foundation. All rights reserved</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="{{asset('js/app.js')}}" defer></script>
     </body>
 </html>
