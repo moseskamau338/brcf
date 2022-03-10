@@ -1,112 +1,307 @@
 <x-site-layout>
-        <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="relative bg-white overflow-hidden">
-  <div class="max-w-7xl mx-auto">
-    <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-      <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <polygon points="50,0 100,0 50,100 0,100" />
-      </svg>
+<div class="bg-linear-pink lg:pb-0">
+            <div class="mx-auto container">
+               <nav  x-show="showMobileMenu" class="lg:hidden relative z-50">
+                <div class="flex py-2 justify-between items-center px-4">
+                    <div>
+                        <img src="{{asset('images/logo.png')}}" class="w-1/4" alt="">
+                    </div>
+                    <div  x-show="showMobileMenu" class="visible flex items-center">
+                        <div
+                         x-show="showMobileMenu"
+                            x-transition:enter="duration-150 ease-out"
+                            x-transition:enter-start="opacity-0 scale-95"
+                            x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="duration-100 ease-in"
+                            x-transition:leave-start="opacity-100 scale-100"
+                            x-transition:leave-end="opacity-0 scale-95"
+                            class="absolute  z-10 top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden">
+                          <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                            <div class="px-5 pt-4 flex items-center justify-between">
+                              <div>
+                                <img src="{{asset('images/logo.svg')}}" class="w-1/4" alt="">
+                              </div>
+                              <div class="-mr-2">
+                                <button type="button" x-on:click="showMobileMenu = false; alert('Closing')" class="bg-white rounded-md p-2
+                                inline-flex
+                                items-center
+                                justify-center
+                                text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                  <span class="sr-only">Close mobile menu</span>
+                                  <!-- Heroicon name: outline/x -->
+                                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="px-2 pt-2 pb-3 space-y-1">
+                              <a href="{{route('home')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700
+                              hover:text-gray-900
+                              hover:bg-gray-50">Home</a>
 
-      <div>
-        <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
-          <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
-            <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-              <div class="flex items-center justify-between w-full md:w-auto">
-                <a href="#">
-                  <span class="sr-only">Workflow</span>
-                  <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg">
-                </a>
-                <div class="-mr-2 flex items-center md:hidden">
-                  <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <!-- Heroicon name: outline/menu -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                  </button>
+                              <a href="{{route('about')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700
+                              hover:text-gray-900 hover:bg-gray-50">About Us</a>
+
+                              <a href="{{route('contact')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700
+                              hover:text-gray-900 hover:bg-gray-50">Contact Us</a>
+
+                              <a href="{{route('blog')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700
+                              hover:text-gray-900 hover:bg-gray-50">News</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </nav>
+                <nav class="f-f-l relative z-10">
+                    <div class="relative z-10 mx-auto hidden container w-full lg:px-4 xl:px-0 lg:flex justify-between items-center py-11">
+                        <div>
+                            <img src="{{asset('images/logo.png')}}" class="w-1/4 absolute" alt="">
+                        </div>
+                        <div class="flex items-center text-lg font-bold">
+                            <ul class="flex items-center pr-12">
+                                 @foreach($globalData->mainMenu as $menu)
+                                    @if($loop->first)
+                                         <li class="cursor-pointer text-color-1"><a href="{{route($menu->route)
+                                    }}">{{$menu->name}}</a></li>
+                                    @else
+                                         <li class="xl:pl-8 lg:pl-5 cursor-pointer text-color-1"><a href="{{route($menu->route)
+                                         }}">{{$menu->name}}</a></li>
+                                    @endif
+                                @endforeach
+                            </ul>
+                            <button class="py-3 px-6 bg-white bg-linear-button-about-us text-white text-lg font-bold flex items-center justify-center">
+                                Donate
+                                <i class="ml-2 fa fa-box-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+                <div class="mx-auto container w-full flex justify-center items-center flex-col">
+                    <div class="flex flex-col w-full mx-auto container items-center justify-center pt-10 lg:pt-28 f-f-l">
+                        <h1 class="text-2xl md:text-5xl xl:text-8xl text-center font-black text-color-gradient md:leading-tight xl:leading-snug">
+                            Our Vision is to be a safe haven <br />
+                             for cancer patients.
+                        </h1>
+                        
+                        <div class="relative py-4 sm:py-24">
+                          <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
+                            <div class="relative sm:py-16 lg:py-0">
+                              <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
+                                <div class="absolute inset-y-0 right-1/2 w-full bg-gray-50 rounded-r-3xl lg:right-72"></div>
+                                <svg class="absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12" width="404" height="392" fill="none" viewBox="0 0 404 392">
+                                  <defs>
+                                    <pattern id="02f20b47-fd69-4224-a62a-4c9de5c763f7" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                      <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                                    </pattern>
+                                  </defs>
+                                  <rect width="404" height="392" fill="url(#02f20b47-fd69-4224-a62a-4c9de5c763f7)" />
+                                </svg>
+                              </div>
+                              <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
+                                <!-- Testimonial card-->
+                                <div class="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
+                                  <img class="absolute inset-0 h-full w-full object-cover" src="{{asset('images/about_help.jpg')}}" alt="">
+                                  <div class="absolute inset-0 bg-pink-400 mix-blend-multiply"></div>
+                                  <div class="absolute inset-0 bg-gradient-to-t from-cyan-800 via-cyan-500/70 opacity-70"></div>
+                                  <div class="relative px-8">
+                                    <div>
+                                      <img class="h-20" src="{{asset('images/white-logo.png')}}" alt="Beth Rapha Cancer Foundation logo">
+                                    </div>
+                                    <blockquote class="mt-8">
+                                      <div class="relative text-lg font-medium text-white md:flex-grow">
+                                        <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-indigo-400" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                                          <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                        </svg>
+                                        <p class="relative">EVERY PERSON STRUGGLING WITH CANCER NEEDS SUPPORT, LOVE AND CARE</p>
+                                      </div>
+
+                                      <footer class="mt-4">
+                                        <p class="text-base font-semibold text-indigo-200">~ Beth Rapha Cancer Foundation</p>
+                                      </footer>
+                                    </blockquote>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
+                              <!-- Content area -->
+                              <div class="pt-12 sm:pt-16 lg:pt-20">
+                                <h2 class="text-3xl text-cyan-900 font-extrabold tracking-tight sm:text-4xl">On a mission to empower teams</h2>
+                                <div class="mt-6 text-gray-500 space-y-6">
+                                  <p class="text-lg">Beth Rapha Cancer Foundation was officially registered as an NGO by the NGO board of Kenya on the 29th of June 2021. It was founded by five friends with the aim of alleviating the plight of cancer patients.</p>
+                                  <p class="text-base leading-7">In 2017, the Kenyan media highlighted the case of cancer patients who spent the night in the corridors of public hospitals during the course of treatment. This was occasioned mostly by lack of a place to stay in Nairobi.  A good number of these patients came from areas that are far from Nairobi and they did not have relatives to host them in Nairobi.</p>
+                                  <p class="text-base leading-7">Those patients who are undergoing radiotherapy which on average takes between a month or two are required to attend the sessions continuously for the whole month, thus lack of a place to stay poses a huge challenge for these patients. In view of this, the five friends came together to seek for ways they could formulate practical interventions to alleviate the dire situation.</p>
+                                </div>
+                              </div>
+
+                              <!-- Stats section -->
+                              <div class="mt-10">
+                                <dl class="grid grid-cols-2 gap-x-4 gap-y-8">
+                                  <div class="border-t-2 border-gray-100 pt-6">
+                                    <dt class="text-base font-medium text-gray-500">Founded</dt>
+                                    <dd class="text-3xl font-extrabold tracking-tight text-cyan-900">2021</dd>
+                                  </div>
+
+                                  <div class="border-t-2 border-gray-100 pt-6">
+                                    <dt class="text-base font-medium text-gray-500">Projects</dt>
+                                    <dd class="text-3xl font-extrabold tracking-tight text-cyan-900">5</dd>
+                                  </div>
+
+                                  {{-- <div class="border-t-2 border-gray-100 pt-6">
+                                    <dt class="text-base font-medium text-gray-500">Beta Users</dt>
+                                    <dd class="text-3xl font-extrabold tracking-tight text-cyan-900">521</dd>
+                                  </div> --}}
+
+                                  <div class="border-t-2 border-gray-100 pt-6">
+                                    <dt class="text-base font-medium text-gray-500">Raised</dt>
+                                    <dd class="text-3xl font-extrabold tracking-tight text-cyan-900">Ksh 0.3M</dd>
+                                  </div>
+                                </dl>
+                                <div class="mt-10">
+                                  <a href="#" class="text-base font-medium text-indigo-600"> Learn more about how we're changing the world <span aria-hidden="true">&rarr;</span> </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+          <div class="py-16 bg-gray-50 overflow-hidden">
+            <div class="lg:max-w-7xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8">
+              <div class="text-base max-w-prose mx-auto lg:max-w-none">
+                <h2 class="text-base text-pink-600 font-semibold tracking-wide uppercase">The Effort</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Our work</p>
+              </div>
+              <div class="lg:flex sm:block">
+                <div class="relative z-10 text-base max-w-prose mx-auto lg:max-w-6xl lg:mx-0  lg:pr-72">
+                  <p class="text-2xl text-gray-500 prose prose-blockquote:">
+                    The NGO has undertaken some activities including <b>visiting cancer patients</b> coming from low income areas, and <b>supporting them with foodstuff</b>. 
+                    <br />
+                    Equally, some have been facilitated to <b>access treatment</b> where previously financial and other various issues barred them from pursuing treatment for cancer.
+                    <br />
+                    <b>Beth Rapha</b> is seeking for means and ways to establish a place that patients can be accommodated in the course of treatment. <b>This, the founders trust will go a long way</b> in alleviating the cancer burden as the patients shall be able to adhere to the treatment as well as have some of the other challenges solved.
+                  </p>
+                </div>
+                <div class="sm:mt-12">
+                 <img src="{{asset('images/visitation_slum.jpg')}}" class="lg:absolute lg:w-1/3 sm:w-3/4 lg:right-2 sm:m-auto  rounded shadow-lg" alt="">
                 </div>
               </div>
             </div>
-            <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Product</a>
+          </div>
 
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Features</a>
+        <section class="w-full pt-6 pb-32 bg-white">
+            <div class="relative px-12 mx-auto max-w-7xl">
 
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Marketplace</a>
+                <div class="relative grid items-center grid-cols-1 gap-10 p-12 overflow-hidden shadow-2xl md:p-16 lg:p-20 xl:p-24 bg-gradient-to-r from-cyan-700 to-cyan-900 rounded-2xl md:grid-cols-5 lg:gap-0">
 
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Company</a>
+                    <div class="absolute top-0 right-0">
+                        <svg viewBox="0 0 487 487" class="object-cover w-full h-full" xmlns="http://www.w3.org/2000/svg"><path d="M487 486.7c-66.1-3.6-132.3-7.3-186.3-37s-95.9-85.3-126.2-137.2c-30.4-51.8-49.3-99.9-76.5-151.4C70.9 109.6 35.6 54.8.3 0H487v486.7z" fill="#FFF" fill-rule="nonzero" fill-opacity=".1"></path></svg>
+                    </div>
 
-              <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Log in</a>
+                    <div class="absolute bottom-0 left-0 h-full">
+                        <svg viewBox="0 0 487 487" class="w-auto h-full opacity-75 object-stretch" xmlns="http://www.w3.org/2000/svg"><path d="M0 .3c67 2.1 134.1 4.3 186.3 37 52.2 32.7 89.6 95.8 112.8 150.6 23.2 54.8 32.3 101.4 61.2 149.9 28.9 48.4 77.7 98.8 126.4 149.2H0V.3z" fill="#FFF" fill-rule="nonzero" fill-opacity=".1"></path></svg>
+                    </div>
+
+                    <div class="relative z-30 col-span-1 md:col-span-3">
+                        <h2 class="mb-1 text-3xl font-bold leading-tight text-white md:mb-3 md:text-3xl lg:text-4xl xl:text-5xl">Our Urgent Call...</h2>
+                        <p class="max-w-sm my-6 text-base font-normal text-white xl:max-w-lg lg:pr-0 pr-7 lg:text-xl">
+                          The patients have many challenges including: 
+                          <ul class="text-base font-normal text-white marker:text-white list-disc">
+                            <li>Lack of proper nutrition during treatment,</li>
+                            <li>Lack of transport to and from hospital,</li>
+                            <li>lack of financial means to pay for treatment (Tests, imaging and procedures)</li>
+                          </ul>
+                          <p class="text-white text-2xl font-bold pl-0 mt-10 tracking-wide">
+                             You can help us make their situation more bearable. <br /> Donate today and save the day!
+                          </p>
+                        </p>
+                        <button type="button" class="inline-flex items-center px-4 py-2 mt-8 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500">Donate Today
+                          <i class="ml-2 fa fa-box-heart"></i>
+                        </button>
+
+                    </div>
+                    <div class="flex items-center h-full col-span-1 md:col-span-2">
+                        <img src="{{asset('images/Visiting_the_home_of_a_cancer_patient.jpg')}}" class="relative top-0 right-0 object-cover w-full -mr-1 shadow-xl border-4 border-pink-400 rounded-lg md:max-w-sm md:w-auto max-w-none lg:absolute lg:max-w-md xl:max-w-lg lg:mt-9" alt="Visiting_the_home_of_a_cancer_patient">
+                    </div>
+                </div>
             </div>
-          </nav>
+        </section>
+
+        {{-- Teams --}}
+        <div class="bg-white">
+          <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+              <div class="space-y-5 sm:space-y-4">
+                <h2 class="text-3xl font-extrabold text-cyan-900 tracking-tight sm:text-4xl">Meet our leadership</h2>
+                <p class="text-xl text-gray-500">The organization draws its membership from professionals in the health care sector and other relevant areas. Currently the organization operates within Nairobi and its environs with a vision of spreading its presence across Africa.</p>
+              </div>
+              <div class="lg:col-span-2">
+                <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8">
+                  @foreach ($globalData->members as $member)
+                    <li>
+                      <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full shadow-xl lg:w-20 lg:h-20" src="{{$member['image']}}" alt="">
+                        <div class="font-medium text-lg leading-6 space-y-1">
+                          <h3>{{$member['name']}}</h3>
+                          <p class="text-pink-600">{{$member['description']}}</p>
+                        </div>
+                      </div>
+                    </li>
+                  @endforeach
+
+                  <!-- More people... -->
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!--
-          Mobile menu, show/hide based on menu open state.
+        {{-- Events --}}
+        <div class="relative bg-cyan-900">
+        <div class="h-56 from-cyan-900
+             via-pink-500 to-pink-400 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+          <img class="w-full h-full object-cover" src="{{asset('images/hands.jpg')}}" alt="">
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div class="md:ml-auto md:w-1/2 md:pl-10">
+            <h2 class="text-base font-semibold uppercase tracking-wider text-gray-300">Upcoming Events</h2>
+            <p class="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">Volunteer Onboarding Meeting</p>
+            <p class="mt-3 text-lg text-gray-300">We shall be conducting our  yearly volunteer onboarding  where we give guidelinse regarding the organizational procedures as well as provide resource for efficiency within the workforce.</p>
+            <div class="mt-8">
+              <dl class="grid grid-cols-2 gap-x-4 gap-y-8 mb-12">
+                  <div class="pt-6">
+                    <dt class="text-base font-medium text-white">Venue</dt>
+                    <dd class="text-xl font-extrabold tracking-tight text-gray-100">Nairobi, Street X</dd>
+                  </div>
+                
+                  <div class="pt-6">
+                    <dt class="text-base font-medium text-white">Date</dt>
+                    <dd class="text-xl font-extrabold tracking-tight text-gray-100">12<sup>th</sup> July, 2022</dd>
+                  </div>
+            </dl>
 
-          Entering: "duration-150 ease-out"
-            From: "opacity-0 scale-95"
-            To: "opacity-100 scale-100"
-          Leaving: "duration-100 ease-in"
-            From: "opacity-100 scale-100"
-            To: "opacity-0 scale-95"
-        -->
-        <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-          <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-            <div class="px-5 pt-4 flex items-center justify-between">
-              <div>
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
-              </div>
-              <div class="-mr-2">
-                <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                  <span class="sr-only">Close main menu</span>
-                  <!-- Heroicon name: outline/x -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              <div class="inline-flex rounded-md shadow">
+                <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
+                  Become a volunteer today
+                  <!-- Heroicon name: solid/external-link -->
+                  <svg class="-mr-1 ml-3 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
-            <div class="px-2 pt-2 pb-3 space-y-1">
-              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product</a>
-
-              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
-
-              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
-
-              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
-            </div>
-            <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"> Log in </a>
           </div>
         </div>
       </div>
-
-      <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-        <div class="sm:text-center lg:text-left">
-          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-            <span class="block xl:inline">Data to enrich your</span>
-            <span class="block text-indigo-600 xl:inline">online business</span>
-          </h1>
-          <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div class="rounded-md shadow">
-              <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> Get started </a>
-            </div>
-            <div class="mt-3 sm:mt-0 sm:ml-3">
-              <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"> Live demo </a>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  </div>
-  <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-    <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="">
-  </div>
-</div>
-
-
-
 
 
 </x-site-layout>

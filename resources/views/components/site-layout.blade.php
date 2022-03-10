@@ -7,6 +7,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="{{asset('fonts/css/all.min.css')}}">
+
         <link rel="stylesheet" href="{{mix('css/app.css')}}" />
         <link rel="stylesheet" href="{{asset('css/custom.css')}}" />
         <style>
@@ -17,7 +19,7 @@
         <title>Home</title>
     </head>
 
-    <body>
+    <body  x-data="{showMobileMenu: false}">
 
        {{ $slot }}
 

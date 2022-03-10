@@ -1,5 +1,5 @@
 <x-site-layout>
-        <div x-data="{showMobileMenu: false}" class="relative w-full h-full">
+        <div class="relative w-full h-full">
             <div class="hidden md:block">
                 <img class="absolute bg-cover bg-center w-full h-full inset-0" src="https://cdn.tuk.dev/assets/templates/prodify/background.png" alt="" />
             </div>
@@ -67,20 +67,20 @@
                         <img src="{{asset('images/logo.svg')}}" class="w-1/4 absolute" alt="">
                     </div>
                     <div class="flex items-center text-white text-lg font-bold">
-                        <ul class="flex items-center pr-3 xl:pr-12">
-                            <li class="cursor-pointer hover:text-gray-300 ease-in"><a href="{{route('home')}}">Home</a></li>
-                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="{{route('about')}}">About
-                                    Us</a></li>
-                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="{{route('contact')
-                            }}">Contact Us</a></li>
-                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="{{route('blog')
-                            }}">News</a></li>
+                        <ul class="flex items-center pr-12">
+                            @foreach($globalData->mainMenu as $menu)
+                                @if($loop->first)
+                                <li class="cursor-pointer hover:text-gray-300 ease-in"><a href="{{route($menu->route)
+                                }}">{{$menu->name}}</a></li>
+                                @else
+                                    <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="{{route
+                                    ($menu->route)}}">{{$menu->name}}</a></li>
+                                @endif
+                            @endforeach
                         </ul>
                         <button class="px-6 py-3 bg-white bg-linear-button text-white text-lg font-bold flex items-center justify-center">
                             Donate
-                            <svg class="ml-4" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                <path d="M9.129 5.24952L5.106 1.22652L6.1665 0.166016L12 5.99952L6.1665 11.833L5.106 10.7725L9.129 6.74952H0V5.24952H9.129Z" fill="white" />
-                            </svg>
+                                <i class="ml-2 fa fa-box-heart"></i>
                         </button>
                     </div>
                 </div>
@@ -259,15 +259,8 @@
                             <h2 class="relative max-w-lg mt-5 mb-10 text-4xl text-cyan-900 font-semibold leading-tight lg:text-5xl">An incredibly
                                 dedicated<br> team of individuals</h2>
                             <div class="grid w-full grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-4">
-                                @php
-                                    $members = [
-                                        ['name'=>'Dr. Odhiambo Mbati','description'=>'Doctor', 'image'=>'images/team/Dr_Odhiambo_Bati.png'],
-                                        ['name'=>'Pricilla Okindo','description'=>'Doctor', 'image'=>'images/team/Priscilla_Okindo.png'],
-                                        ['name'=>'Ronnie Midigo','description'=>'Doctor', 'image'=>'images/team/Ronnie_Midigo.png'],
-                                        ['name'=>'Wilson Mosbey','description'=>'Doctor', 'image'=>'images/team/wilson_mosbey.png'],
-                                    ];
-                                @endphp
-                                @foreach($members as $member)
+                        
+                                @foreach($globalData->members as $member)
 
                                     <div class="flex flex-col items-center justify-center col-span-1">
                                         <div class="relative p-5">
