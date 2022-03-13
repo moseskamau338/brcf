@@ -13,10 +13,13 @@
         <link rel="stylesheet" href="{{asset('css/custom.css')}}" />
         <style>
             [x-cloack] {display: none;}
+            html,body{
+                scroll-behavior: smooth;
+            }
         </style>
            <script src="{{asset('js/app.js')}}" defer></script>
         {{ $styles?? null }}
-        <title>Home</title>
+        <title>{{$title ?? 'Home'}} | Beth Rapha Cancer Foundation Kenya</title>
     </head>
 
     <body  x-data="{showMobileMenu: false}">
