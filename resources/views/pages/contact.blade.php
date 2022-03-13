@@ -1,263 +1,179 @@
 <x-site-layout>
-    <div class="bg-white">
-  <header class="relative pb-24 bg-sky-800 sm:pb-32">
-    <div class="absolute inset-0">
-      <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100" alt="">
-      <div class="absolute inset-0 bg-gradient-to-l from-pink-800 to-cyan-700 mix-blend-multiply" aria-hidden="true"></div>
-    </div>
-    <div class="relative z-10">
-      <nav class="relative max-w-7xl mx-auto flex items-center justify-between pt-6 pb-2 px-4 sm:px-6 lg:px-8" aria-label="Global">
-        <div class="flex items-center justify-between w-full lg:w-auto">
-          <a href="#">
-            <span class="sr-only">Workflow</span>
-            <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=emerald&shade=300" alt="">
-          </a>
-          <div class="-mr-2 flex items-center lg:hidden">
-            <button type="button" class="bg-sky-800 bg-opacity-0 rounded-md p-2 inline-flex items-center justify-center text-cyan-100 hover:bg-opacity-100 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" aria-expanded="false">
-              <span class="sr-only">Open main menu</span>
-              <!-- Heroicon name: outline/menu -->
-              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="hidden space-x-10 lg:flex lg:ml-10">
-          <a href="#" class="text-base font-medium text-white hover:text-cyan-100">Changelog</a>
+  <x-slot name='title' >
+    Contact Us
+  </x-slot>
+<div class="bg-linear-pink lg:pb-0">
+              @include('layouts.partials.menu') 
+                {{-- header --}}
+        
 
-          <a href="#" class="text-base font-medium text-white hover:text-cyan-100">About</a>
+                <div class="max-w-7xl mx-auto relative bg-white lg:mt-32 shadow-xl sm:mt-4 sm:pt-4">
 
-          <a href="#" class="text-base font-medium text-white hover:text-cyan-100">Partners</a>
+                  <div class="max-w-3xl mx-8 mt-4 lg:mx-auto md:mt-16">
 
-          <a href="#" class="text-base font-medium text-white hover:text-cyan-100">News</a>
-        </div>
-        <div class="hidden lg:flex lg:items-center lg:space-x-6">
-          <a href="#" class="py-2 px-6 bg-white bg-opacity-10 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-20"> Login </a>
-        </div>
-      </nav>
+                  <div class="absolute inset-0">
+                    <div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50"></div>
+                  </div>
+                  <div class="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5">
+                    <div class="bg-gray-50 py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
+                      <div class="max-w-lg mx-auto">
+                        <h2 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">Get in touch</h2>
+                        <p class="mt-3 text-lg leading-6 text-gray-500">Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.</p>
+                        <dl class="mt-8 text-base text-gray-500">
+                          <div>
+                            <dt class="sr-only">Postal address</dt>
+                            <dd>
+                              <p>742 Evergreen Terrace</p>
+                              <p>Springfield, OR 12345</p>
+                            </dd>
+                          </div>
+                          <div class="mt-6">
+                            <dt class="sr-only">Phone number</dt>
+                            <dd class="flex">
+                              <!-- Heroicon name: outline/phone -->
+                              <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                              </svg>
+                              <span class="ml-3"> +1 (555) 123-4567 </span>
+                            </dd>
+                          </div>
+                          <div class="mt-3">
+                            <dt class="sr-only">Email</dt>
+                            <dd class="flex">
+                              <!-- Heroicon name: outline/mail -->
+                              <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                              </svg>
+                              <span class="ml-3"> support@example.com </span>
+                            </dd>
+                          </div>
+                        </dl>
+                        <p class="mt-6 text-base text-gray-500">
+                          Looking for careers?
+                          <a href="#" class="font-medium text-gray-700 underline">View all job openings</a>.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
+                      <div class="max-w-lg mx-auto lg:max-w-none">
+                        <form action="#" method="POST" class="grid grid-cols-1 gap-y-6">
+                          <div>
+                            <label for="full-name" class="sr-only">Full name</label>
+                            <input type="text" name="full-name" id="full-name" autocomplete="name" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Full name">
+                          </div>
+                          <div>
+                            <label for="email" class="sr-only">Email</label>
+                            <input id="email" name="email" type="email" autocomplete="email" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Email">
+                          </div>
+                          <div>
+                            <label for="phone" class="sr-only">Phone</label>
+                            <input type="text" name="phone" id="phone" autocomplete="tel" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Phone">
+                          </div>
+                          <div>
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea id="message" name="message" rows="4" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md" placeholder="Message"></textarea>
+                          </div>
+                          <div>
+                            <button type="submit" class="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-      <!--
-        Mobile menu, show/hide based on menu open state.
+                      
 
-        Entering: "duration-150 ease-out"
-          From: "opacity-0 scale-95"
-          To: "opacity-100 scale-100"
-        Leaving: "duration-100 ease-in"
-          From: "opacity-100 scale-100"
-          To: "opacity-0 scale-95"
-      -->
-      <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top lg:hidden">
-        <div class="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-          <div class="px-5 pt-4 flex items-center justify-between">
+
             <div>
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=emerald&shade=400" alt="">
-            </div>
-            <div class="-mr-2">
-              <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-warm-gray-400 hover:bg-warm-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
-                <span class="sr-only">Close menu</span>
-                <!-- Heroicon name: outline/x -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="pt-5 pb-6">
-            <div class="px-2 space-y-1">
-              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50">Changelog</a>
+              <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+                <div class="relative bg-white shadow-xl">
+                  <h2 class="sr-only">Contact us</h2>
 
-              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50">About</a>
+                  <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <!-- Contact information -->
+                    <div class="relative overflow-hidden py-10 px-6 bg-gradient-to-br from-cyan-900 via-cyan-800
+                    to-pink-400 sm:px-10 xl:p-12">
+                      <div class="absolute inset-0 pointer-events-none sm:hidden" aria-hidden="true">
+                        <svg class="absolute inset-0 w-full h-full" width="343" height="388" viewBox="0 0 343 388" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M-99 461.107L608.107-246l707.103 707.107-707.103 707.103L-99 461.107z" fill="url(#linear1)" fill-opacity=".1" />
+                          <defs>
+                            <linearGradient id="linear1" x1="254.553" y1="107.554" x2="961.66" y2="814.66" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#fff"></stop>
+                              <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div class="hidden absolute top-0 right-0 bottom-0 w-1/2 pointer-events-none sm:block lg:hidden" aria-hidden="true">
+                        <svg class="absolute inset-0 w-full h-full" width="359" height="339" viewBox="0 0 359 339" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M-161 382.107L546.107-325l707.103 707.107-707.103 707.103L-161 382.107z" fill="url(#linear2)" fill-opacity=".1" />
+                          <defs>
+                            <linearGradient id="linear2" x1="192.553" y1="28.553" x2="899.66" y2="735.66" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#fff"></stop>
+                              <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div class="hidden absolute top-0 right-0 bottom-0 w-1/2 pointer-events-none lg:block" aria-hidden="true">
+                        <svg class="absolute inset-0 w-full h-full" width="160" height="678" viewBox="0 0 160 678" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M-161 679.107L546.107-28l707.103 707.107-707.103 707.103L-161 679.107z" fill="url(#linear3)" fill-opacity=".1" />
+                          <defs>
+                            <linearGradient id="linear3" x1="192.553" y1="325.553" x2="899.66" y2="1032.66" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#fff"></stop>
+                              <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <h3 class="text-3xl font-medium text-white">
+                        Join Our Volunteer Program
+                      </h3>
+                      <p class="mt-6 text-lg text-indigo-50 max-w-3xl">
+                       There's no better way of fulfilling your life's call other than to commit your tallents and skills to uplifting humanity.
+                      </p>
+                      <p class="mt-6 text-lg text-indigo-50 max-w-3xl">
+                       When you put a smile on the helpess and weary, when they glorify God because of your labour of love, then you can be sure that God will take care of you.
+                      </p>
+                     
+                    </div>
 
-              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50">Partners</a>
-
-              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50">News</a>
-            </div>
-            <div class="mt-6 px-5">
-              <a href="#" class="block text-center w-full py-2 px-4 border border-transparent rounded-md shadow bg-green-400 text-white font-medium hover:bg-green-500">Login</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="relative mt-24 max-w-md mx-auto px-4 sm:max-w-3xl sm:mt-32 sm:px-6 lg:max-w-7xl lg:px-8">
-      <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Get in touch</h1>
-      <p class="mt-6 text-xl text-cyan-100 max-w-3xl">Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque lacus nisi urna, arcu sociis eu. Orci vel lectus nisl eget eget ut consectetur. Sit justo viverra non adipisicing elit distinctio.</p>
-    </div>
-  </header>
-
-  <main>
-    <!-- Side-by-side grid -->
-    <div class="bg-white">
-      <div class="max-w-md mx-auto py-24 px-4 sm:max-w-3xl sm:py-32 sm:px-6 lg:max-w-7xl lg:px-8">
-        <div class="divide-y divide-warm-gray-200">
-          <section class="lg:grid lg:grid-cols-3 lg:gap-8" aria-labelledby="contact-heading">
-            <h2 id="contact-heading" class="text-2xl font-extrabold text-warm-gray-900 sm:text-3xl">Get in touch</h2>
-            <div class="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2">
-              <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">Collaborate</h3>
-                <dl class="mt-2 text-base text-warm-gray-500">
-                  <div>
-                    <dt class="sr-only">Email</dt>
-                    <dd>support@example.com</dd>
+                    <!-- Contact form -->
+                    <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+                      <h3 class="text-3xl font-medium text-gray-900 mb-8">Please fill this Volunteer Application form to start.</h3>
+                      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfyZcTOCzNWZPI7SArw3rCPG39zheh1GxXm9TDJIg_x6ss_Cw/viewform?embedded=true" class="m-auto" width="500" height="560" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
                   </div>
-                  <div class="mt-1">
-                    <dt class="sr-only">Phone number</dt>
-                    <dd>+1 (555) 123-4567</dd>
-                  </div>
-                </dl>
-              </div>
-
-              <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">Press</h3>
-                <dl class="mt-2 text-base text-warm-gray-500">
-                  <div>
-                    <dt class="sr-only">Email</dt>
-                    <dd>support@example.com</dd>
-                  </div>
-                  <div class="mt-1">
-                    <dt class="sr-only">Phone number</dt>
-                    <dd>+1 (555) 123-4567</dd>
-                  </div>
-                </dl>
-              </div>
-
-              <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">Join our team</h3>
-                <dl class="mt-2 text-base text-warm-gray-500">
-                  <div>
-                    <dt class="sr-only">Email</dt>
-                    <dd>support@example.com</dd>
-                  </div>
-                  <div class="mt-1">
-                    <dt class="sr-only">Phone number</dt>
-                    <dd>+1 (555) 123-4567</dd>
-                  </div>
-                </dl>
-              </div>
-
-              <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">Say hello</h3>
-                <dl class="mt-2 text-base text-warm-gray-500">
-                  <div>
-                    <dt class="sr-only">Email</dt>
-                    <dd>support@example.com</dd>
-                  </div>
-                  <div class="mt-1">
-                    <dt class="sr-only">Phone number</dt>
-                    <dd>+1 (555) 123-4567</dd>
-                  </div>
-                </dl>
-              </div>
-            </div>
-          </section>
-          <section class="mt-16 pt-16 lg:grid lg:grid-cols-3 lg:gap-8" aria-labelledby="location-heading">
-            <h2 id="location-heading" class="text-2xl font-extrabold text-warm-gray-900 sm:text-3xl">Locations</h2>
-            <div class="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2">
-              <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">Los Angeles</h3>
-                <div class="mt-2 text-base text-warm-gray-500 space-y-1">
-                  <p>4556 Brendan Ferry</p>
-
-                  <p>Los Angeles, CA 90210</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">New York</h3>
-                <div class="mt-2 text-base text-warm-gray-500 space-y-1">
-                  <p>886 Walter Streets</p>
-
-                  <p>New York, NY 12345</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">Toronto</h3>
-                <div class="mt-2 text-base text-warm-gray-500 space-y-1">
-                  <p>7363 Cynthia Pass</p>
-
-                  <p>Toronto, ON N3Y 4H8</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">Chicago</h3>
-                <div class="mt-2 text-base text-warm-gray-500 space-y-1">
-                  <p>726 Mavis Island</p>
-
-                  <p>Chicago, IL 60601</p>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </div>
+
+            <section class="flex items-center justify-center my-12 py-0 bg-white bg-gradient-to-br from-cyan-900 via-cyan-800
+                    to-pink-400 min-w-screen">
+                        <div class="relative flex flex-col items-center w-full max-w-6xl px-4 py-8 mx-auto text-center lg:text-left lg:block sm:px-6 md:pb-0 md:pt-12 lg:px-12 lg:py-12">
+                            <h2 class="my-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl lg:my-0 xl:text-4xl sm:leading-tight">
+                                Still want <span class="block text-indigo-200 xl:inline">to support?</span>
+                            </h2>
+                            <p class="mt-1 mb-10 text-sm font-medium text-indigo-200 xl:text-base xl:tracking-wider lg:mb-0">
+                                If, for some reason, you might not be able to join our team but still want to support,<br/> you might consider donating today...
+                            </p>
+                            <div class="flex mb-8 lg:mt-6 lg:mb-0">
+                                <div class="inline-flex">
+                                    <a href="#_" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-pink-700 transition duration-150 ease-in-out bg-indigo-100 border border-transparent rounded-md hover:text-pink-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-indigo-300">
+                                        Donate
+                                        <i class="ml-2 fa fa-box-heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="bottom-0 -right-20 mb-0 mr-3 lg:absolute lg:-mb-2 overflow-hidden">
+                                <img src="{{asset('images/hands.png')}}" class="max-w-xs mb-0 opacity-80 md:max-w-2xl lg:max-w-lg xl:mb-0
+                                xl:max-w-md">
+                            </div>
+                        </div>
+                    </section>
+
+
+
     </div>
-
-    <!-- FAQ -->
-    <div class="bg-warm-gray-50">
-      <div class="max-w-md mx-auto py-24 px-4 sm:max-w-3xl sm:py-32 sm:px-6 lg:max-w-7xl lg:px-8">
-        <div class="lg:grid lg:grid-cols-3 lg:gap-8">
-          <div>
-            <h2 class="text-3xl font-extrabold text-warm-gray-900">Frequently asked questions</h2>
-            <p class="mt-4 text-lg text-warm-gray-500">Can’t find the answer you’re looking for? Reach out to our <a href="#" class="font-medium text-cyan-700 hover:text-cyan-600">customer support</a> team.</p>
-          </div>
-          <div class="mt-12 lg:mt-0 lg:col-span-2">
-            <dl class="space-y-12">
-              <div>
-                <dt class="text-lg font-medium text-warm-gray-900">How do you make holy water?</dt>
-                <dd class="mt-2 text-base text-warm-gray-500">You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</dd>
-              </div>
-
-              <div>
-                <dt class="text-lg font-medium text-warm-gray-900">What&#039;s the best thing about Switzerland?</dt>
-                <dd class="mt-2 text-base text-warm-gray-500">I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</dd>
-              </div>
-
-              <div>
-                <dt class="text-lg font-medium text-warm-gray-900">What do you call someone with no body and no nose?</dt>
-                <dd class="mt-2 text-base text-warm-gray-500">Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</dd>
-              </div>
-
-              <div>
-                <dt class="text-lg font-medium text-warm-gray-900">Why do you never see elephants hiding in trees?</dt>
-                <dd class="mt-2 text-base text-warm-gray-500">Because they&#039;re so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Newsletter -->
-    <div class="relative">
-      <div class="absolute left-0 right-0 h-1/2 bg-warm-gray-50" aria-hidden="true"></div>
-      <div class="relative max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-        <div class="py-10 px-6 bg-gradient-to-br from-cyan-900 via-pink-500 to-pink-400 rounded-3xl sm:py-16 sm:px-12 lg:py-20 lg:px-20
-        lg:flex lg:items-center">
-          <div class="lg:w-0 lg:flex-1">
-            <h2 class="text-3xl font-extrabold tracking-tight text-white">Sign up for our newsletter</h2>
-            <p class="mt-4 max-w-3xl text-lg text-cyan-100">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt amet fugiat.</p>
-          </div>
-          <div class="mt-12 sm:w-full sm:max-w-md lg:mt-0 lg:ml-8 lg:flex-1">
-            <form class="sm:flex">
-              <label for="email-address" class="sr-only">Email address</label>
-              <input id="email-address" name="email-address" type="email" autocomplete="email" required class="w-full border-white px-5 py-3 placeholder-warm-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-cyan-700 focus:ring-white rounded-md" placeholder="Enter your email">
-              <button type="submit" class="mt-3 w-full flex items-center justify-center px-5 py-3 border border-transparent text-base
-              font-medium rounded-md text-white bg-cyan-900 hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-offset-2
-              focus:ring-offset-cyan-700 focus:ring-pink-400 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0">Notify me</button>
-            </form>
-            <p class="mt-3 text-sm text-cyan-100">
-              We care about the protection of your data. Read our
-              <a href="#" class="text-white font-medium underline"> Privacy Policy. </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-
-</div>
 </x-site-layout>
