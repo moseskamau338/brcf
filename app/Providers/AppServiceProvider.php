@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
                 (object)['name' => 'Home', 'route' => 'home'],
                 (object)['name' => 'About Us', 'route' => 'about'],
                 (object)['name' => 'Contact Us', 'route' => 'contact'],
-                (object)['name' => 'News', 'route' => 'blog'],
+                // (object)['name' => 'News', 'route' => 'blog'],
             ],
             'members' => [
                 ['name'=>'Dr. Odhiambo Mbati','description'=>'Doctor', 'image'=>'images/team/Dr_Odhiambo_Bati.png'],

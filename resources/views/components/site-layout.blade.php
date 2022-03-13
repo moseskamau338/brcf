@@ -22,7 +22,7 @@
         <title>{{$title ?? 'Home'}} | Beth Rapha Cancer Foundation Kenya</title>
     </head>
 
-    <body  x-data="{showMobileMenu: false}">
+    <body  x-data="{showMobileMenu: false}" x-init="console.log('Body tag initialised')">
 
        {{ $slot }}
 
