@@ -12,8 +12,9 @@
                   <div class="max-w-3xl mx-8 mt-4 lg:mx-auto md:mt-16">
 
                   <div class="absolute inset-0">
-                    <div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50"></div>
+                    <div class="inset-y-0 left-0 w-1/2 bg-gray-50"></div>
                   </div>
+
                   <div class="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5">
                     <div class="bg-gray-50 py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
                       <div class="max-w-lg mx-auto">
@@ -48,10 +49,7 @@
                             </dd>
                           </div>
                         </dl>
-                        <p class="mt-6 text-base text-gray-500">
-                          Looking for careers?
-                          <a href="#" class="font-medium text-gray-700 underline">View all job openings</a>.
-                        </p>
+                       
                       </div>
                     </div>
                     <div class="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
@@ -82,10 +80,6 @@
                   </div>
                 </div>
 
-                      
-
-
-            <div>
               <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
                 <div class="relative bg-white shadow-xl">
                   <h2 class="sr-only">Contact us</h2>
@@ -147,7 +141,6 @@
                   </div>
                 </div>
               </div>
-            </div>
 
             <section class="flex items-center justify-center my-12 py-0 bg-white bg-gradient-to-br from-cyan-900 via-cyan-800
                     to-pink-400 min-w-screen">
