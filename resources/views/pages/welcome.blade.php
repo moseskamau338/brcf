@@ -157,18 +157,19 @@
                                     <div class="py-2 text-color">
                                         <h1 class="text-2xl text-cyan-900 lg:text-6xl lg:leading-snug tracking-tighter f-f-l font-black">What drives
                                             us?</h1>
-                                        <h2 class="text-lg lg:text-3xl leading-7 text-cyan-900 lg:leading-10 f-f-r py-4 lg:py-8"><b>Beth Rapha cancer
-                                            foundation</b> was
-                                            officially registered on 29th June 2021 as a Non Governmental Organization. The foundation works towards providing a dignified accommodation for cancer patients seeking treatment and with limited capacities to find their own accommodation.
-</h2>
-                                        <div class="flex items-center cursor-pointer">
+                                        <h2 class="text-lg lg:text-3xl leading-7 text-cyan-900 lg:leading-10 f-f-r py-4 lg:py-8"><b>
+                                                Compassion and brotherly love.
+                                            </b> We are there because others are there. No one should carry their  burden alone.
+                                            The belief that we  are all brothers and sisters in Christ and have one Father, have one father, the Lord who loves all
+                                        </h2>
+                                        <a class="flex items-center" href="/about-us">
                                             <h3 class="f-f-r text-2xl font-semibold underline text-color-pink">More about us</h3>
                                             <div class="pl-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                     <path d="M13.1719 12L8.22192 7.04999L9.63592 5.63599L15.9999 12L9.63592 18.364L8.22192 16.95L13.1719 12Z" fill="#D53F8C" />
                                                 </svg>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="lg:w-1/3 w-full relative min-height-images flex items-end justify-center">
@@ -179,15 +180,15 @@
                                             <div class="flex items-center">
 
                                                 <div class="ml-6">
-                                                    <h3 class="mb-1 leading-5 text-cyan-900 font-bold text-2xl">We do 5 visits to needy
-                                                        cancer patients every week
+                                                    <h3 class="mb-1 leading-5 text-cyan-900 font-bold text-2xl">We do visits to needy
+                                                        cancer patients every month
                                                     </h3>
                                                 </div>
                                             </div>
 
                                         </div>
-                                                <button class="text-sm w-1/2 mt-4 f-f-r py-2
-                                                bg-linear-button-home text-white font-bold">Become a volunteer</button>
+                                                <a href="/contact-us" class="text-sm w-1/2 mt-4 py-2 px-4
+                                                bg-linear-button-home text-white font-bold">Become a volunteer</a>
 
                                     </div>
                                 </div>
@@ -207,7 +208,7 @@
                             <h2 class="relative max-w-lg mt-5 mb-10 text-4xl text-cyan-900 font-semibold leading-tight lg:text-5xl">An incredibly
                                 dedicated<br> team of individuals</h2>
                             <div class="grid w-full grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-4">
-                        
+
                                 @foreach($globalData->members as $member)
 
                                     <div class="flex flex-col items-center justify-center col-span-1">
@@ -219,16 +220,9 @@
                                         <div class="mt-3 space-y-2 text-center">
                                             <div class="space-y-1 text-lg font-medium leading-6">
                                                 <h3>{{$member['name']}}</h3>
-                                                   <p class="text-blue-600">{{$member['description']}}</p>
+                                                   <p class="text-color-pink">{{$member['description']}}</p>
                                             </div>
-                                            <div class="relative flex items-center justify-center space-x-3">
-                                                <a href="#_" class="text-gray-300 hover:text-gray-400">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
-                                                </a>
-                                                <a href="#_" class="text-gray-300 hover:text-gray-400">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
-                                                </a>
-                                            </div>
+
                                         </div>
                                     </div>
                                 @endforeach
@@ -249,7 +243,7 @@
                             </p>
                             <div class="flex mb-8 lg:mt-6 lg:mb-0">
                                 <div class="inline-flex">
-                                    <a href="#_" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-indigo-700 transition duration-150 ease-in-out bg-indigo-100 border border-transparent rounded-md hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-indigo-300">
+                                    <a href="/contact-us" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-indigo-700 transition duration-150 ease-in-out bg-indigo-100 border border-transparent rounded-md hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-indigo-300">
                                         Sign Up Today
                                     </a>
                                 </div>
@@ -261,65 +255,8 @@
                         </div>
                     </section>
 
-
-                    <section class="relative w-full bg-white">
-                        <div class="absolute w-full h-32 bg-gradient-to-b from-gray-100 to-white"></div>
-                        <div class="relative w-full px-5 py-10 mx-auto sm:py-12 md:py-16 md:px-10 max-w-7xl">
-
-                            <h1 class="mb-1 text-4xl font-extrabold leading-none text-cyan-900 lg:text-5xl xl:text-6xl sm:mb-3"><a
-                                    href="#_">Upcoming Events</a></h1>
-                            <p class="text-lg font-medium text-gray-500 sm:text-2xl">Designs and layouts to help you with your app.</p>
-                            <div class="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
-                                <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
-                                    <a href="#_" class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover
-                                    h-96 hover:scale-110" style="background-image:url('/images/care.jpg')">
-                                    </a>
-                                    <div class="relative z-20 w-full h-auto py-8 text-white bg-white bg-gradient-to-br from-cyan-900 via-cyan-800
-                    to-pink-400 border-t-0 border-yellow-200 px-7">
-                                        <a href="#_" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4
-                                        py-2 uppercase text-purple-500 bg-white">Training</a>
-                                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Home Care Seminar</a></h2>
-                                        <p class="mb-2 text-lg font-normal text-purple-100 opacity-100">How do give your best in caring
-                                            for a sick loved one at home?</p>
-
-                                    </div>
-                                </div>
-
-                                <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
-                                    <a href="#_" class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover
-                                    h-96 hover:scale-110" style="background-image:url('/images/health.jpg')">
-                                    </a>
-                                    <div class="relative z-20 w-full h-auto py-8 text-white bg-white bg-gradient-to-br from-cyan-900 via-cyan-800
-                    to-pink-400 border-t-0 border-yellow-200 px-7">
-                                        <a href="#_" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4
-                                        py-2 uppercase text-purple-500 bg-white">Training</a>
-                                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Healthy Living Seminar</a></h2>
-                                        <p class="mb-2 text-lg font-normal text-purple-100 opacity-100">Learn how you can improve your
-                                            health by using God-given solutions at home...</p>
-
-                                    </div>
-                                </div>
-
-                                <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
-                                    <a href="#_" class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover
-                                    h-96 hover:scale-110" style="background-image:url('/images/fund.jpg')">
-                                    </a>
-                                    <div class="relative z-20 w-full h-auto py-8 text-white bg-white bg-gradient-to-br from-cyan-900 via-cyan-800
-                    to-pink-400 border-t-0 border-yellow-200 px-7">
-                                        <a href="#_" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4
-                                        py-2 uppercase text-purple-500 bg-white">Training</a>
-                                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Fund Raising Ceremony</a></h2>
-                                        <p class="mb-2 text-lg font-normal text-purple-100 opacity-100">We need to raise money for our
-                                            building project, please support us with prayer and means</p>
-
-                                    </div>
-                                </div>
-
-
-
-                            </div>
-                        </div>
-                    </section>
+                    {{--events--}}
+                   @include('layouts.partials.events')
 
 
 
@@ -341,19 +278,19 @@
                 <h4 class="text-cyan-900 text-5xl mb-8">Since 2021:</h4>
                 <div class="xl:flex items-center justify-between w-full text-color">
                     <div class="flex flex-col items-center xl:block py-4 xl:py-0">
-                        <h1 class="text-6xl text-cyan-900 font-black f-f-l">15+</h1>
-                        <h2 class="f-f-r text-color-lighter text-3xl pt-5">Homes Built</h2>
+                        <h1 class="text-6xl text-cyan-900 font-black f-f-l">9+</h1>
+                        <h2 class="f-f-r text-color-lighter text-3xl pt-5">Homes Visited</h2>
                     </div>
                     <div class="flex flex-col items-center xl:block py-4 xl:py-0">
                         <h1 class="text-6xl text-cyan-900 font-black f-f-l">30</h1>
                         <h2 class="f-f-r text-color-lighter text-3xl pt-5">Lives touched</h2>
                     </div>
                     <div class="flex flex-col items-center xl:block py-4 xl:py-0">
-                        <h1 class="text-6xl text-cyan-900 font-black f-f-l">78</h1>
+                        <h1 class="text-6xl text-cyan-900 font-black f-f-l">10</h1>
                         <h2 class="f-f-r text-color-lighter text-3xl pt-5">Regular events</h2>
                     </div>
                     <div class="flex flex-col items-center xl:block py-4 xl:py-0">
-                        <h1 class="text-6xl text-cyan-900 font-black f-f-l">4</h1>
+                        <h1 class="text-6xl text-cyan-900 font-black f-f-l">24</h1>
                         <h2 class="f-f-r text-color-lighter text-3xl pt-5">Team Members</h2>
                     </div>
                 </div>
@@ -375,7 +312,7 @@
                 </p>
 
                 <div class="mt-auto">
-                  <a href="#" class="inline-block w-full px-10 py-5 text-lg font-semibold text-center text-gray-800 transition
+                  <a href="/contact-us" class="inline-block w-full px-10 py-5 text-lg font-semibold text-center text-gray-800 transition
                   duration-100 bg-white rounded-lg outline-none hover:bg-gray-100 active:bg-gray-200 focus-visible:ring ring-indigo-300
                   md:w-auto md:text-xl">Join the team</a>
                 </div>
