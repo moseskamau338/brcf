@@ -4,13 +4,13 @@
              <img src="{{asset('images/logo-icon.svg')}}" class="w-[150px]" alt="">
         </div>
         <div class="text-cyan-900 flex flex-col md:items-center f-f-l pt-3">
-            <h1 class="text-2xl font-black">Care. Support. Repeat.</h1>
+            <h1 class="text-2xl font-black">Care. Support. Encourage.</h1>
 
             <div class="my-6 text-base text-color f-f-l">
                 <ul class="md:flex items-center">
-                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">About</li>
-                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">Contact Us</li>
-                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">Blog</li>
+                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a class="hover:underline" href="/about-us">About</a></li>
+                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a class="hover:underline" href="/contact-us">Contact Us</a></li>
+                    {{--<li class="md:mr-6 cursor-pointer pt-4 lg:py-0">Blog</li>--}}
                     <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">Gallery</li>
                     <li class="cursor-pointer pt-4 lg:py-0">Code of Honor</li>
                 </ul>

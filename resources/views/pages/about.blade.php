@@ -2,16 +2,16 @@
     <x-slot name='title' >
       About Us
     </x-slot>
-    
+
           <div class="bg-linear-pink lg:pb-0">
-                @include('layouts.partials.menu') 
+                @include('layouts.partials.menu')
                   <div class="mx-auto container w-full flex justify-center items-center flex-col">
                       <div class="flex flex-col w-full mx-auto container items-center justify-center pt-10 lg:pt-28 f-f-l">
                           <h1 class="text-2xl md:text-5xl xl:text-8xl text-center font-black text-color-gradient md:leading-tight xl:leading-snug">
                               Our Vision is to be a safe haven <br />
                                 for cancer patients.
                           </h1>
-                          
+
                           <div class="relative py-4 sm:py-24">
                             <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
                               <div class="relative sm:py-16 lg:py-0">
@@ -77,19 +77,12 @@
                                       <dd class="text-3xl font-extrabold tracking-tight text-cyan-900">5</dd>
                                     </div>
 
-                                    {{-- <div class="border-t-2 border-gray-100 pt-6">
-                                      <dt class="text-base font-medium text-gray-500">Beta Users</dt>
-                                      <dd class="text-3xl font-extrabold tracking-tight text-cyan-900">521</dd>
-                                    </div> --}}
 
                                     <div class="border-t-2 border-gray-100 pt-6">
                                       <dt class="text-base font-medium text-gray-500">Raised</dt>
                                       <dd class="text-3xl font-extrabold tracking-tight text-cyan-900">Ksh 0.3M</dd>
                                     </div>
                                   </dl>
-                                  <div class="mt-10">
-                                    <a href="#" class="text-base font-medium text-indigo-600"> Learn more about how we're changing the world <span aria-hidden="true">&rarr;</span> </a>
-                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -108,9 +101,9 @@
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Our work</p>
               </div>
               <div class="lg:flex sm:block">
-                <div class="relative z-10 text-base max-w-prose mx-auto lg:max-w-6xl lg:mx-0  lg:pr-72">
+                <div class="relative z-10 text-base max-w-prose mx-auto lg:max-w-[65%] lg:mx-0">
                   <p class="text-2xl text-gray-500 prose prose-blockquote:">
-                    The NGO has undertaken some activities including <b>visiting cancer patients</b> coming from low income areas, and <b>supporting them with foodstuff</b>. 
+                    The NGO has undertaken some activities including <b>visiting cancer patients</b> coming from low income areas, and <b>supporting them with foodstuff</b>.
                     <br />
                     Equally, some have been facilitated to <b>access treatment</b> where previously financial and other various issues barred them from pursuing treatment for cancer.
                     <br />
@@ -140,7 +133,7 @@
                     <div class="relative z-30 col-span-1 md:col-span-3">
                         <h2 class="mb-1 text-3xl font-bold leading-tight text-white md:mb-3 md:text-3xl lg:text-4xl xl:text-5xl">Our Urgent Call...</h2>
                         <p class="max-w-sm my-6 text-base font-normal text-white xl:max-w-lg lg:pr-0 pr-7 lg:text-xl">
-                          The patients have many challenges including: 
+                          The patients have many challenges including:
                           <ul class="text-base font-normal text-white marker:text-white list-disc">
                             <li>Lack of proper nutrition during treatment,</li>
                             <li>Lack of transport to and from hospital,</li>
@@ -206,17 +199,17 @@
               <dl class="grid grid-cols-2 gap-x-4 gap-y-8 mb-12">
                   <div class="pt-6">
                     <dt class="text-base font-medium text-white">Venue</dt>
-                    <dd class="text-xl font-extrabold tracking-tight text-gray-100">Nairobi, Street X</dd>
+                    <dd class="text-xl font-extrabold tracking-tight text-gray-100">Nairobi</dd>
                   </div>
-                
+
                   <div class="pt-6">
                     <dt class="text-base font-medium text-white">Date</dt>
-                    <dd class="text-xl font-extrabold tracking-tight text-gray-100">12<sup>th</sup> July, 2022</dd>
+                    <dd class="text-xl font-extrabold tracking-tight text-gray-100">20<sup>th</sup> October, 2022</dd>
                   </div>
             </dl>
 
               <div class="inline-flex rounded-md shadow">
-                <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
+                <a href="/contact-us" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
                   Become a volunteer today
                   <!-- Heroicon name: solid/external-link -->
                   <svg class="-mr-1 ml-3 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
