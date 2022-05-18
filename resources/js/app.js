@@ -1,17 +1,26 @@
 import Alpine from 'alpinejs'
 Alpine.data('events', () => ({
-     skip: 1,
+     skip: 4,
     slider: null,
     active: 1,
     total: null,
     interval: 3000,
     autoplay: false,
     direction: 'right',
+    events:[
+        {title:'Home Care Seminar', description:'How do give your best in caring for a sick loved one at home?', date:'12th June, 2022', venue:'Nairobi', image:'/images/care.jpg', category:'Training'},
+        {title:'Home Care Seminar', description:'How do give your best in caring for a sick loved one at home?', date:'12th June, 2022', venue:'Nairobi', image:'/images/care.jpg', category:'Training'},
+        {title:'Home Care Seminar', description:'How do give your best in caring for a sick loved one at home?', date:'12th June, 2022', venue:'Nairobi', image:'/images/care.jpg', category:'Training'},
+        {title:'Home Care Seminar', description:'How do give your best in caring for a sick loved one at home?', date:'12th June, 2022', venue:'Nairobi', image:'/images/care.jpg', category:'Training'},
+        {title:'Home Care Seminar', description:'How do give your best in caring for a sick loved one at home?', date:'12th June, 2022', venue:'Nairobi', image:'/images/care.jpg', category:'Training'},
+        {title:'Home Care Seminar', description:'How do give your best in caring for a sick loved one at home?', date:'12th June, 2022', venue:'Nairobi', image:'/images/care.jpg', category:'Training'},
+        {title:'Home Care Seminar', description:'How do give your best in caring for a sick loved one at home?', date:'12th June, 2022', venue:'Nairobi', image:'/images/care.jpg', category:'Training'},
+    ],
     init() {
 
-        this.$nextTick(() => {
-            this.total = this.$refs.slider.children.length;
-        });
+        //this.$nextTick(() => {
+        //    this.total = this.$refs.slider.children.length;
+        //});
 
         if(this.autoplay) {
             this.play();
