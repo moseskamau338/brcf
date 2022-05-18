@@ -982,12 +982,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-auto {
   margin-top: auto;
 }
-.mr-4 {
-  margin-right: 1rem;
-}
-.-mr-2 {
-  margin-right: -0.5rem;
-}
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -999,6 +993,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+.mr-4 {
+  margin-right: 1rem;
+}
+.-mr-2 {
+  margin-right: -0.5rem;
 }
 .block {
   display: block;
@@ -1042,20 +1042,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-32 {
   height: 8rem;
 }
-.h-10 {
-  height: 2.5rem;
-}
-.h-96 {
-  height: 24rem;
+.h-48 {
+  height: 12rem;
 }
 .h-auto {
   height: auto;
 }
-.h-40 {
-  height: 10rem;
+.h-10 {
+  height: 2.5rem;
 }
-.h-48 {
-  height: 12rem;
+.h-64 {
+  height: 16rem;
+}
+.h-72 {
+  height: 18rem;
 }
 .w-full {
   width: 100%;
@@ -1090,34 +1090,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-screen {
   width: 100vw;
 }
-.\!w-64 {
-  width: 16rem !important;
+.w-\[350px\] {
+  width: 350px;
 }
 .w-\[150px\] {
   width: 150px;
 }
 .w-10 {
   width: 2.5rem;
-}
-.w-32 {
-  width: 8rem;
-}
-.w-min {
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-}
-.w-48 {
-  width: 12rem;
-}
-.w-\[300px\] {
-  width: 300px;
-}
-.w-\[400px\] {
-  width: 400px;
-}
-.w-\[350px\] {
-  width: 350px;
 }
 .max-w-md {
   max-width: 28rem;
@@ -1179,9 +1159,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .snap-mandatory {
   --tw-scroll-snap-strictness: mandatory;
-}
-.snap-start {
-  scroll-snap-align: start;
 }
 .list-disc {
   list-style-type: disc;
@@ -1325,14 +1302,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-t-2 {
   border-top-width: 2px;
 }
+.border-t-0 {
+  border-top-width: 0px;
+}
 .border-b-2 {
   border-bottom-width: 2px;
 }
 .border-l-4 {
   border-left-width: 4px;
-}
-.border-t-0 {
-  border-top-width: 0px;
 }
 .border-gray-100 {
   --tw-border-opacity: 1;
@@ -1349,13 +1326,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-transparent {
   border-color: transparent;
 }
-.border-pink-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(236 72 153 / var(--tw-border-opacity));
-}
 .border-yellow-200 {
   --tw-border-opacity: 1;
   border-color: rgb(254 240 138 / var(--tw-border-opacity));
+}
+.border-pink-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(236 72 153 / var(--tw-border-opacity));
 }
 .bg-gray-50 {
   --tw-bg-opacity: 1;
@@ -1392,21 +1369,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
-.bg-red-600 {
+.bg-green-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-.bg-emerald-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(110 231 183 / var(--tw-bg-opacity));
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 .bg-pink-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 242 248 / var(--tw-bg-opacity));
 }
-.bg-green-500 {
+.bg-gray-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
@@ -1560,9 +1533,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 .px-3 {
   padding-left: 0.75rem;
@@ -1572,9 +1545,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 .pt-10 {
   padding-top: 2.5rem;
@@ -1849,11 +1822,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .opacity-60 {
   opacity: 0.6;
 }
-.opacity-0 {
-  opacity: 0;
-}
 .opacity-100 {
   opacity: 1;
+}
+.opacity-0 {
+  opacity: 0;
 }
 .mix-blend-multiply {
   mix-blend-mode: multiply;
@@ -1916,13 +1889,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
 .marker\:text-white *::marker {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1959,6 +1925,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-gray-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+.hover\:bg-gray-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 .hover\:bg-opacity-10:hover {
   --tw-bg-opacity: 0.1;
@@ -2004,6 +1974,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
+.focus\:ring:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
 .focus\:ring-inset:focus {
   --tw-ring-inset: inset;
 }
@@ -2014,6 +1989,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:ring-indigo-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity));
+}
+.focus\:ring-pink-300:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(249 168 212 / var(--tw-ring-opacity));
+}
+.focus\:ring-sky-300:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(125 211 252 / var(--tw-ring-opacity));
+}
+.focus\:ring-sky-800:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(7 89 133 / var(--tw-ring-opacity));
+}
+.focus\:ring-sky-600:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(2 132 199 / var(--tw-ring-opacity));
 }
 .focus\:ring-offset-2:focus {
   --tw-ring-offset-width: 2px;
