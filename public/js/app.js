@@ -3484,36 +3484,83 @@ __webpack_require__.r(__webpack_exports__);
 
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('events', function () {
   return {
-    skip: 1,
+    skip: 4,
     slider: null,
     active: 1,
     total: null,
     interval: 3000,
     autoplay: false,
     direction: 'right',
+    events: [{
+      title: 'Home Care Seminar',
+      description: 'How do give your best in caring for a sick loved one at home?',
+      date: '12th June, 2022',
+      venue: 'Nairobi',
+      image: '/images/care.jpg',
+      category: 'Training'
+    }, {
+      title: 'Home Care Seminar',
+      description: 'How do give your best in caring for a sick loved one at home?',
+      date: '12th June, 2022',
+      venue: 'Nairobi',
+      image: '/images/care.jpg',
+      category: 'Training'
+    }, {
+      title: 'Home Care Seminar',
+      description: 'How do give your best in caring for a sick loved one at home?',
+      date: '12th June, 2022',
+      venue: 'Nairobi',
+      image: '/images/care.jpg',
+      category: 'Training'
+    }, {
+      title: 'Home Care Seminar',
+      description: 'How do give your best in caring for a sick loved one at home?',
+      date: '12th June, 2022',
+      venue: 'Nairobi',
+      image: '/images/care.jpg',
+      category: 'Training'
+    }, {
+      title: 'Home Care Seminar',
+      description: 'How do give your best in caring for a sick loved one at home?',
+      date: '12th June, 2022',
+      venue: 'Nairobi',
+      image: '/images/care.jpg',
+      category: 'Training'
+    }, {
+      title: 'Home Care Seminar',
+      description: 'How do give your best in caring for a sick loved one at home?',
+      date: '12th June, 2022',
+      venue: 'Nairobi',
+      image: '/images/care.jpg',
+      category: 'Training'
+    }, {
+      title: 'Home Care Seminar',
+      description: 'How do give your best in caring for a sick loved one at home?',
+      date: '12th June, 2022',
+      venue: 'Nairobi',
+      image: '/images/care.jpg',
+      category: 'Training'
+    }],
     init: function init() {
-      var _this = this;
-
-      this.$nextTick(function () {
-        _this.total = _this.$refs.slider.children.length;
-      });
-
+      //this.$nextTick(() => {
+      //    this.total = this.$refs.slider.children.length;
+      //});
       if (this.autoplay) {
         this.play();
       }
     },
     next: function next() {
-      var _this2 = this;
+      var _this = this;
 
       this.to(function (current, offset) {
-        return current + offset * _this2.skip;
+        return current + offset * _this.skip;
       });
     },
     prev: function prev() {
-      var _this3 = this;
+      var _this2 = this;
 
       this.to(function (current, offset) {
-        return current - offset * _this3.skip;
+        return current - offset * _this2.skip;
       });
     },
     to: function to(strategy) {
@@ -3526,33 +3573,33 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('events', function () {
       });
     },
     play: function play() {
-      var _this4 = this;
+      var _this3 = this;
 
       var counter = this.active; // run every this.interval milliseconds
 
       var interval = setInterval(function () {
         // check if direction is right and click next
-        if (_this4.direction === 'right') {
-          _this4.next();
+        if (_this3.direction === 'right') {
+          _this3.next();
 
           counter++;
         } // check if direction is left and click prev
 
 
-        if (_this4.direction === 'left') {
-          _this4.prev();
+        if (_this3.direction === 'left') {
+          _this3.prev();
 
           counter--;
         } // check if counter is equal to total and change direction to left
 
 
-        if (counter === _this4.total) {
-          _this4.direction = 'left';
+        if (counter === _this3.total) {
+          _this3.direction = 'left';
         } // check if counter is equal to 1 and change direction to right
 
 
-        if (counter === _this4.active) {
-          _this4.direction = 'right';
+        if (counter === _this3.active) {
+          _this3.direction = 'right';
         }
       }, this.interval);
     },
