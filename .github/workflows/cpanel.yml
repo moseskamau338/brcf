@@ -28,7 +28,7 @@ jobs:
         mkdir -p database
         touch database/database.sqlite
     - name: Sync files
-      uses: SamKirland/FTP-Deploy-Action@4.1.0
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ftp.bethraphafoundation.org
         username: ${{ secrets.CPANEL_USERNAME }}
