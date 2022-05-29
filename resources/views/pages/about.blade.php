@@ -132,6 +132,7 @@
                 <div class="bg-gray-200 break-inside-avoid hover:scale-105 transition-all">
                     <img loading="lazy" src="{{$picture}}" alt="Visitation" class="rounded shadow">
                 </div>
+
                 @endforeach
             </div>
             </div>
