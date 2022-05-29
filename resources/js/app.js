@@ -1,4 +1,9 @@
 import Alpine from 'alpinejs'
+import intersect from '@alpinejs/intersect'
+
+Alpine.plugin(intersect)
+
+
 Alpine.data('events', () => ({
      skip: 1,
     slider: null,
