@@ -54,4 +54,4 @@ jobs:
           tailwind.config.js
           webpack.mix.js
           work.md
-        server-dir: /public_html/
+        server-dir: /
