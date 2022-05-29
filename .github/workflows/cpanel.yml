@@ -24,3 +24,34 @@ jobs:
         username: ${{ secrets.CPANEL_USERNAME }}
         password: ${{ secrets.CPANEL_PASSWORD }}
         server-dir: /
+
+    - name: Update public files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ftp.bethraphafoundation.org
+        username: ${{ secrets.CPANEL_USERNAME }}
+        password: ${{ secrets.CPANEL_PASSWORD }}
+        local-dir: ./public/
+        exclude: |
+          **/.git*
+          **/app*
+          **/bootstrap*
+          **/config*
+          **/database*
+          **/lang*
+          **/resources*
+          **/routes*
+          **/storage*
+          **/tests*
+          **/.git*/**
+          **/node_modules/**
+          /.*
+          artisan
+          **compose*
+          package*
+          phpunit.xml
+          README.md
+          tailwind.config.js
+          webpack.mix.js
+          work.md
+        server-dir: /public_html/
