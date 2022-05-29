@@ -17,8 +17,9 @@ jobs:
       uses: actions/checkout@v3
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-    - name: Installing front-end dependencies
+    - name: Prepare front-end dependencies
       uses: actions/setup-node@master
+    - name: Installing front-end dependencies
       run: npm install
     - name: Compiling front-end assets
       run: npm run production
