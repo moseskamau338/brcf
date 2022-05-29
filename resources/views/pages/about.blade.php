@@ -97,7 +97,7 @@
             <div class="lg:max-w-7xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8">
               <div class="text-base max-w-prose mx-auto lg:max-w-none">
                 <h2 class="text-base text-pink-600 font-semibold tracking-wide uppercase">The Effort</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Our work</p>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-cyan-900  sm:text-4xl">Our work</p>
               </div>
               <div class="lg:flex sm:block">
                 <div class="relative z-10 text-base max-w-prose mx-auto lg:max-w-[65%] lg:mx-0">
@@ -115,6 +115,89 @@
               </div>
             </div>
           </div>
+
+        <section  x-data="{ open: false }"
+              @keydown.escape="open = false" class="w-full pt-6 bg-white">
+            <div class="relative px-12 mx-auto max-w-7xl">
+            <div class="flex justify-between text-base max-w-prose mx-auto lg:max-w-none py-5">
+                <div>
+                    <h2 class="text-base text-pink-600 font-semibold tracking-wide uppercase">The Field work</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-cyan-900  sm:text-4xl">Gallery</p>
+                </div>
+                  <button @click="open = true" class="inline-flex h-fit items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-cyan-900 bg-pink-200 hover:bg-pink-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 hover:scale-105 transition-all cursor-pointer disabled:opacity-50 disabled:pointer-events-none">View more</button>
+
+              </div>
+            <div class="columns-4 gap-3 w-[1200px] mx-auto space-y-3 pb-28">
+                @foreach($pictures as $picture)
+                <div class="bg-gray-200 break-inside-avoid hover:scale-105 transition-all">
+                    <img loading="lazy" src="{{$picture}}" alt="Visitation" class="rounded shadow">
+                </div>
+                @endforeach
+            </div>
+            </div>
+
+            {{--scaled gallery--}}
+            <div class="fixed z-[9999] top-0 left-0 w-full h-full flex items-center justify-center" style="background-color: rgba(0,0,0,.5);" x-show.transition="open">
+                <div class="flex z-[9999] items-center justify-start w-12 m-2 ml-6 mb-4 md:m-2 absolute bottom-0 transform translate-x-12 md:translate-x-32">
+                  <button
+                          class="text-white w-12 h-12 rounded-full flex items-center justify-center focus:outline-none"
+                          style="background-color: rgba(0,0,0,.4);"
+                          @click="open = false">
+                    <img src="https://obr.now.sh/remixicon/system/close-fill/64/ffffff" class="w-6 h-6">
+                  </button>
+                </div>
+
+                <div class="h-full bg-pink-400/20 w-full flex items-center justify-center overflow-hidden" x-data="{activeSlide: 0, slides: {{ json_encode($pictures,TRUE)}} }">
+
+                  <template x-for="(slide, index) in slides" :key="index">
+                    <div class="h-full w-full flex items-center justify-center absolute">
+                      <div class="absolute top-0 bottom-0 py-2 md:py-24 px-2 flex flex-col items-center justify-center"
+                           x-show="activeSlide === index"
+                           x-transition:enter="transition ease-out duration-150"
+                           x-transition:enter-start="opacity-0 transform scale-90"
+                           x-transition:enter-end="opacity-100 transform scale-100"
+                           x-transition:leave="transition ease-in duration-150"
+                           x-transition:leave-start="opacity-100 transform scale-100"
+                           x-transition:leave-end="opacity-0 transform scale-90">
+
+                          <img :src="slide" class="object-contain max-w-full max-h-full rounded shadow-lg" />
+
+                      </div>
+                      <div class="fixed text-white text-sm font-bold bottom-0 transform -translate-x-10 w-40 h-12 mb-2 hidden md:flex justify-center items-center"
+                           x-show="activeSlide === index">
+                        <span class="w-12 text-right" x-text="index + 1"></span>
+                        <span class="w-4 text-center">/</span>
+                        <span class="w-12 text-left" x-text="slides.length"></span>
+                      </div>
+                    </div>
+                  </template>
+
+                  <div  class="fixed z-[9999] bottom-0 mb-4 md:mb-2 transform -translate-x-8 md:-translate-x-10 flex justify-center">
+                    <div class="flex items-center justify-end w-12 mr-3 md:mr-16">
+                      <button
+                              type="button"
+                              class="w-12 h-12 rounded-full focus:outline-none flex items-center justify-center"
+                              style="background-color: rgba(0,0,0,.4);"
+                              @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1">
+                       <span class="text-white">&leftarrow;</span>
+                      </button>
+                    </div>
+                    <div class="flex items-center justify-start w-12 md:ml-16">
+                      <button
+                              type="button"
+                              class="text-white font-bold w-12 h-12 rounded-full focus:outline-none flex items-center justify-center"
+                              style="background-color: rgba(0,0,0,.4);"
+                              @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1">
+                        <span class="text-white">&rightarrow;</span>
+                      </button>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+        </section>
+
 
         <section class="w-full pt-6 pb-32 bg-white">
             <div class="relative px-12 mx-auto max-w-7xl">
