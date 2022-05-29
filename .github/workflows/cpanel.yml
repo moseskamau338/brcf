@@ -29,7 +29,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ftp.bethraphafoundation.org
-        username: ${{ secrets.CPANEL_USERNAME }}
+        username: ${{ secrets.CPANEL_PUBLIC_DEPLOY }}
         password: ${{ secrets.CPANEL_PASSWORD }}
         local-dir: ./public/
         exclude: |
