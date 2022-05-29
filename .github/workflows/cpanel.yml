@@ -21,7 +21,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ftp.bethraphafoundation.org
-        exclude: "[**/.git*/**, ./node_modules/, ./vendor/]"
+        exclude: .git
         username: ${{ secrets.CPANEL_USERNAME }}
         password: ${{ secrets.CPANEL_PASSWORD }}
         server-dir: /
