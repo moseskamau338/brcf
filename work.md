@@ -1,7 +1,6 @@
 BRCF - 3rd July
 
-About page
-	- Add more pics
-	- Gallery
+- Contact form submission
+- Donation procedure/Contact page
 
 Add names of all the volunteers

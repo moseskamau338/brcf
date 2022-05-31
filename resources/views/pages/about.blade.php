@@ -29,12 +29,12 @@
                                 <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
                                   <!-- Testimonial card-->
                                   <div class="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
-                                    <img class="absolute inset-0 h-full w-full object-cover" src="{{asset('images/about_help.jpg')}}" alt="">
+                                    <img loading="lazy" class="absolute inset-0 h-full w-full object-cover" src="{{asset('images/about_help.jpg')}}" alt="">
                                     <div class="absolute inset-0 bg-pink-400 mix-blend-multiply"></div>
                                     <div class="absolute inset-0 bg-gradient-to-t from-cyan-800 via-cyan-500/70 opacity-70"></div>
                                     <div class="relative px-8">
                                       <div>
-                                        <img class="h-20" src="{{asset('images/white-logo.png')}}" alt="Beth Rapha Cancer Foundation logo">
+                                        <img loading="lazy" class="h-20" src="{{asset('images/white-logo.png')}}" alt="Beth Rapha Cancer Foundation logo">
                                       </div>
                                       <blockquote class="mt-8">
                                         <div class="relative text-lg font-medium text-white md:flex-grow">
@@ -110,7 +110,7 @@
                   </p>
                 </div>
                 <div class="sm:mt-12">
-                 <img src="{{asset('images/visitation_slum.jpg')}}" class="lg:absolute lg:w-1/3 sm:w-3/4 lg:right-2 sm:m-auto  rounded shadow-lg" alt="">
+                 <img loading="lazy" src="{{asset('images/visitation_slum.jpg')}}" class="lg:absolute lg:w-1/3 sm:w-3/4 lg:right-2 sm:m-auto  rounded shadow-lg" alt="">
                 </div>
               </div>
             </div>
@@ -144,7 +144,7 @@
                           class="text-white w-12 h-12 rounded-full flex items-center justify-center focus:outline-none"
                           style="background-color: rgba(0,0,0,.4);"
                           @click="open = false">
-                    <img src="https://obr.now.sh/remixicon/system/close-fill/64/ffffff" class="w-6 h-6">
+                    <img loading="lazy" src="https://obr.now.sh/remixicon/system/close-fill/64/ffffff" class="w-6 h-6">
                   </button>
                 </div>
 
@@ -161,7 +161,7 @@
                            x-transition:leave-start="opacity-100 transform scale-100"
                            x-transition:leave-end="opacity-0 transform scale-90">
 
-                          <img :src="slide" class="object-contain max-w-full max-h-full rounded shadow-lg" />
+                          <img loading="lazy" :src="slide" class="object-contain max-w-full max-h-full rounded shadow-lg" />
 
                       </div>
                       <div class="fixed text-white text-sm font-bold bottom-0 transform -translate-x-10 w-40 h-12 mb-2 hidden md:flex justify-center items-center"
@@ -232,7 +232,7 @@
 
                     </div>
                     <div class="flex items-center h-full col-span-1 md:col-span-2">
-                        <img src="{{asset('images/Visiting_the_home_of_a_cancer_patient.jpg')}}" class="relative top-0 right-0 object-cover w-full -mr-1 shadow-xl border-4 border-pink-400 rounded-lg md:max-w-sm md:w-auto max-w-none lg:absolute lg:max-w-md xl:max-w-lg lg:mt-9" alt="Visiting_the_home_of_a_cancer_patient">
+                        <img loading="lazy" src="{{asset('images/Visiting_the_home_of_a_cancer_patient.jpg')}}" class="relative top-0 right-0 object-cover w-full -mr-1 shadow-xl border-4 border-pink-400 rounded-lg md:max-w-sm md:w-auto max-w-none lg:absolute lg:max-w-md xl:max-w-lg lg:mt-9" alt="Visiting_the_home_of_a_cancer_patient">
                     </div>
                 </div>
             </div>
@@ -251,7 +251,7 @@
                   @foreach ($globalData->members as $member)
                     <li>
                       <div class="flex items-center space-x-4 lg:space-x-6">
-                        <img class="w-16 h-16 rounded-full shadow-xl lg:w-20 lg:h-20" src="{{$member['image']}}" alt="">
+                        <img loading="lazy" class="w-16 h-16 rounded-full shadow-xl lg:w-20 lg:h-20" src="{{$member['image']}}" alt="">
                         <div class="font-medium text-lg leading-6 space-y-1">
                           <h3>{{$member['name']}}</h3>
                           <p class="text-pink-600">{{$member['description']}}</p>
@@ -271,7 +271,7 @@
         <div class="relative bg-cyan-900">
         <div class="h-56 from-cyan-900
              via-pink-500 to-pink-400 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-          <img class="w-full h-full object-cover" src="{{asset('images/hands.jpg')}}" alt="">
+          <img loading="lazy" class="w-full h-full object-cover" src="{{asset('images/hands.jpg')}}" alt="">
         </div>
         <div class="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
           <div class="md:ml-auto md:w-1/2 md:pl-10">

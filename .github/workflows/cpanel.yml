@@ -35,6 +35,7 @@ jobs:
         exclude: |
           **/.git*
           **/app*
+          **/public/index.php
           **/bootstrap*
           **/config*
           **/database*
