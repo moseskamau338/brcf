@@ -162,7 +162,7 @@
                                 </div>
                             </div>
                             <div class="bottom-0 -right-20 mb-0 mr-3 lg:absolute lg:-mb-2 overflow-hidden">
-                                <img src="{{asset('images/hands.png')}}" class="max-w-xs mb-0 opacity-80 md:max-w-2xl lg:max-w-lg xl:mb-0
+                                <img loading="lazy" src="{{asset('images/hands.png')}}" class="max-w-xs mb-0 opacity-80 md:max-w-2xl lg:max-w-lg xl:mb-0
                                 xl:max-w-md">
                             </div>
                         </div>

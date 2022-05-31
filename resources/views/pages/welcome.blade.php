@@ -1,10 +1,10 @@
 <x-site-layout>
         <div class="relative w-full h-full">
             <div class="hidden md:block">
-                <img class="absolute bg-cover bg-center w-full h-full inset-0" src="{{asset('images/background.png')}}" alt="" />
+                <img loading="lazy" class="absolute bg-cover bg-center w-full h-full inset-0" src="{{asset('images/background.png')}}" alt="" />
             </div>
             <div class="md:hidden">
-                <!-- <img class="absolute bg-cover bg-center w-full h-full inset-0" src="https://cdn.tuk.dev/assets/templates/prodify/backgroundMobile.png" alt="" /> -->
+                <!-- <img loading=lazy class="absolute bg-cover bg-center w-full h-full inset-0" src="https://cdn.tuk.dev/assets/templates/prodify/backgroundMobile.png" alt="" /> -->
             </div>
              @include('layouts.partials.mobile_menu')
 
@@ -12,7 +12,7 @@
             <nav class="f-f-l relative z-10">
                 <div class="relative z-10 mx-auto container hidden w-full px-4 xl:px-0 lg:flex justify-between items-center py-11">
                     <div>
-                        <img src="{{asset('images/logo.svg')}}" class="w-1/4 absolute" alt="">
+                        <img loading="lazy" src="{{asset('images/logo.svg')}}" class="w-1/4 absolute" alt="">
                     </div>
                     <div class="flex items-center text-white text-lg font-bold">
                         <ul class="flex items-center pr-12">
@@ -51,14 +51,14 @@
                               122.171875-42c13.109375-4.730469 28.636719-.261719 35.257812 11.988281 8.992188 16.628907 1.121094 34.96875-14.148437 41.082032l-186.847656 82.269531c-15.28125 6.949219-31.871094 10.546875-48.652344 10.546875-21.296875 0-42.199219-5.789062-60.457031-16.75l-52.300782-31.378906c-12.070312-7.238282-31.761718-11.300782-45.789062-11.808594 0-.019531 0-140.058594 0-140.058594h79.167969c10.3125 0 20.441406 2.648438 29.421875 7.707032l52.839844 29.722656c3 1.6875 6.367187 2.570312 9.808593 2.570312h64.757813c16.570312 0 30 13.429688 30 30 0 11.199219-6.128906 20.957032-15.230469 26.109375zm0 0" fill="#ffcebf" data-original="#ffcebf" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m361.507812 10.5c38.417969 0 64.898438 32.25 64.898438 70.449219 0 50.546875-47.660156 84.386719-128.609375 154.546875-76.980469-66.71875-131.007813-101.707032-131.007813-154.546875 0-38.199219 26.480469-70.449219 64.910157-70.449219 49.320312 0 64.898437 56.246094 64.898437 56.246094s15.578125-56.246094 64.910156-56.246094zm0 0" fill="#ff80ac" data-original="#ff80ac" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m90 252.597656v140.058594c-.03125 11.019531-8.96875 19.9375-20 19.9375h-60v-179.996094h60c11.050781 0 20 8.949219 20 20zm0 0" fill="#faecd8" data-original="#faecd8" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m50 262.597656c-5.519531 0-10 4.480469-10 10 0 5.519532 4.480469 10 10 10s10-4.480468 10-10c0-5.519531-4.480469-10-10-10zm0 0" fill="#fffdfd" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m459.617188 297.273438-94.273438 32.410156c.417969-2.320313.652344-4.6875.652344-7.089844 0-22.054688-17.941406-40-40-40h-64.757813c-1.71875 0-3.414062-.441406-4.910156-1.285156l-52.832031-29.714844c-10.445313-5.886719-22.316406-9-34.328125-9h-70.890625c-4.125-11.636719-15.242188-19.996094-28.277344-19.996094h-60c-5.523438 0-10 4.476563-10 10v179.996094c0 5.523438 4.476562 10 10 10h60c12.738281 0 23.660156-8.003906 27.996094-19.246094 11.320312 1.40625 24.417968 4.753906 32.648437 9.691406l52.296875 31.378907c19.8125 11.890625 42.496094 18.175781 65.605469 18.175781 18.3125 0 36.054687-3.84375 52.738281-11.421875l186.644532-82.183594c20.671874-8.386719 30.878906-33.1875 19.0625-55.046875-8.691407-16.085937-29.046876-23.242187-47.375-16.667968zm-379.617188 95.367187c-.023438 5.492187-4.503906 9.953125-10 9.953125h-50v-159.996094h50c5.511719 0 10 4.484375 10 10zm400.332031-42.148437c-.105469.039062-.210937.085937-.316406.128906 0 0-186.921875 82.304687-186.957031 82.320312-14.082032 6.40625-29.058594 9.652344-44.511719 9.652344-19.484375 0-38.609375-5.296875-55.3125-15.324219l-52.300781-31.378906c-11.195313-6.714844-27.226563-10.808594-40.933594-12.449219v-120.84375h69.167969c8.578125 0 17.054687 2.21875 24.519531 6.425782l52.832031 29.714843c4.476563 2.523438 9.570313 3.859375 14.71875 3.859375h64.757813c11.027344 0 20 8.96875 20 20 0 10.988282-8.976563 20-20 20h-101.65625c-5.523438 0-10 4.476563-10 10 0 5.519532 4.476562 9.996094 10 9.996094h101.65625c6.558594 0 13.015625-1.628906 18.746094-4.683594 0 0 121.542968-41.78125 121.589843-41.796875 8.960938-3.234375 19.09375-.015625 23.066407 7.335938 5.957031 11.019531 1.03125 23-9.066407 27.042969zm0 0" fill="#fffdfd" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m291.246094 243.054688c1.882812 1.628906 4.214844 2.441406 6.550781 2.441406s4.671875-.8125 6.550781-2.441406c81.589844-70.710938 132.058594-106.496094 132.058594-162.105469 0-43.992188-31.144531-80.449219-74.898438-80.449219-28.734374 0-50.738281 16.5625-64.910156 41.417969-14.140625-24.800781-36.121094-41.417969-64.898437-41.417969-33.496094 0-61.5 21.707031-71.34375 55.296875-1.554688 5.300781 1.484375 10.855469 6.785156 12.410156 5.300781 1.554688 10.855469-1.484375 12.40625-6.785156 7.285156-24.859375 27.753906-40.921875 52.152344-40.921875 28.527343 0 48.539062 25.332031 55.261719 48.917969 1.199218 4.332031 5.144531 7.332031 9.636718 7.332031 4.496094 0 8.4375-3 9.636719-7.332031.136719-.488281 14.027344-48.917969 55.273437-48.917969 31.296876 0 54.898438 25.984375 54.898438 60.449219 0 44.484375-43.484375 76.554687-118.617188 141.335937-45.777343-39.3125-82.140624-66.984375-102.808593-94.054687-3.351563-4.390625-9.625-5.234375-14.015625-1.882813-4.390625 3.351563-5.230469 9.625-1.882813 14.019532 23.296875 30.511718 62.625 59.746093 112.164063 102.6875zm0 0" fill="#fffdfd" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m169 88.597656c-5.519531 0-10 4.480469-10 10 0 5.519532 4.480469 10 10 10s10-4.480468 10-10c0-5.519531-4.480469-10-10-10zm0 0" fill="#fffdfd" data-original="#000000" class=""></path></g></svg>
                     </button>
                 </div>
-                <img class="w-full mt-8 md:mt-0 object-fill md:w-2/3 md:-ml-4 lg:-ml-4 xl:ml-0 rounded-xl" src="{{asset('images/hero.jpg')}}" />
+                <img loading="lazy" class="w-full mt-8 md:mt-0 object-fill md:w-2/3 md:-ml-4 lg:-ml-4 xl:ml-0 rounded-xl" src="{{asset('images/hero.jpg')}}" />
             </div>
         </div>
         <div class="mx-auto container px-4 xl:px-0 py-10 xl:py-40">
             <div class="">
                 <div class="flex flex-wrap items-center">
                     <div class="lg:w-2/5 w-full">
-                        <img class="w-full rounded-lg shadow-xl" src="{{asset('images/treatment.png')}}" alt="" srcset="" />
+                        <img loading="lazy" class="w-full rounded-lg shadow-xl" src="{{asset('images/treatment.png')}}" alt="" srcset="" />
                     </div>
                     <div class="lg:w-3/5 w-full">
                         <div class="lg:pl-8 py-2 text-color">
@@ -173,7 +173,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-1/3 w-full relative min-height-images flex items-end justify-center">
-                                    <img class="absolute w-full h-full inset-0 object-cover object-center rounded-xl" src="{{asset
+                                    <img loading="lazy" class="absolute w-full h-full inset-0 object-cover object-center rounded-xl" src="{{asset
                                     ('images/visitation_slum.jpg')}}" alt="" />
                                     <div class="relative z-10 bg-white rounded shadow-lg p-6 w-10/12 -mb-20">
                                         <div class="flex items-center justify-between w-full sm:w-full mb-4">
@@ -215,7 +215,7 @@
                                         <div class="relative p-5">
                                             <div class="absolute shadow-xl z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none
                                             bg-pink-400"></div>
-                                            <img class="relative z-20 w-full rounded-full" src="{{asset($member['image'])}}">
+                                            <img loading="lazy" class="relative z-20 w-full rounded-full" src="{{asset($member['image'])}}">
                                         </div>
                                         <div class="mt-3 space-y-2 text-center">
                                             <div class="space-y-1 text-lg font-medium leading-6">
@@ -249,7 +249,7 @@
                                 </div>
                             </div>
                             <div class="bottom-0 -right-20 mb-0 mr-3 lg:absolute lg:-mb-2 overflow-hidden">
-                                <img src="{{asset('images/hands.png')}}" class="max-w-xs mb-0 opacity-80 md:max-w-2xl lg:max-w-lg xl:mb-0
+                                <img loading="lazy" src="{{asset('images/hands.png')}}" class="max-w-xs mb-0 opacity-80 md:max-w-2xl lg:max-w-lg xl:mb-0
                                 xl:max-w-md">
                             </div>
                         </div>
