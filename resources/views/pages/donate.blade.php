@@ -31,7 +31,7 @@
         <h2 class="font-bold text-cyan-900 text-3xl">To send your financial donations, please follow the instructions below:</h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 mt-6">
-            <div class="bg-[#56AE4E] px-3 py-6">
+            <div style="background-color: #56AE4E" class="px-3 py-6">
                 <h3 class="tracking-widest text-white text-2xl font-black">LIPA NA MPESA</h3>
                 <ul class="list-decimal list-inside text-white">
                     <li>Go to your <b>MPESA</b> menu and select <b>Lipa Na MPESA</b></li>
