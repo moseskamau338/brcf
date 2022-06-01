@@ -22,6 +22,7 @@ Route::controller(PagesController::class)->group(function(){
     Route::get('/', 'index')->name('home');
     Route::get('/about-us', 'about')->name('about');
     Route::get('/contact-us', 'contact')->name('contact');
+    Route::get('/donate', 'donate')->name('donate');
     Route::get('/volunteer', 'volunteer')->name('volunteer');
     Route::get('/blog', 'blog')->name('blog');
 });
