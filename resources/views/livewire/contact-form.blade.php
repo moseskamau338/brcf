@@ -26,7 +26,7 @@
   </div>
   <div>
     <label for="phone" class="sr-only">Phone</label>
-    <input wire:model.defer="phone" type="text" name="phone" id="phone" autocomplete="tel" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Phone">
+    <input wire:model.defer="phone" type="number" name="phone" id="phone" autocomplete="tel" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Phone">
       @error('phone') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
   </div>
   <div>
@@ -35,6 +35,11 @@
       @error('message') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
   </div>
   <div>
-    <button wire:click="submit" type="submit" class="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500">Submit</button>
+    <button wire:loading.attr="disabled" wire:click="submit" type="submit" class="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 disabled:opacity-50 disabled:pointer-events-none">
+        <span wire:loading.remove>Submit</span>
+        <span wire:loading wire:target="submit">
+            Sending message...
+        </span>
+    </button>
   </div>
 </div>

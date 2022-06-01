@@ -35,7 +35,7 @@
                 <h3 class="tracking-widest text-white text-2xl font-black">LIPA NA MPESA</h3>
                 <ul class="list-decimal list-inside text-white">
                     <li>Go to your <b>MPESA</b> menu and select <b>Lipa Na MPESA</b></li>
-                    <li>Select <b>Paybill</b> from the options, then enter the till number below <b><i>(4091743)</i></b></li>
+                    <li>Select <b>Paybill</b> from the options, then enter the till number below <b><i>(329329)</i></b></li>
                     <li>Enter <b>Account Number: </b> <b><i>0102879997600</i></b></li>
                     <li>Enter the amount you wish to donate</li>
                     <li>Confirm transaction by providing your <b>PIN</b></li>
@@ -46,13 +46,12 @@
                 <h5 class="tracking-widest mt-4 text-white text-lg font-semibold">TILL NUMBER</h5>
 
                 <div id="number" class="flex flex-row space-x-2 mt-5">
-                    <span class="bg-white px-4 py-5 flex items-center justify-center text-cyan-900 text-2xl font-bold">4</span>
-                    <span class="bg-white px-4 py-5 flex items-center justify-center text-cyan-900 text-2xl font-bold">0</span>
-                    <span class="bg-white px-4 py-5 flex items-center justify-center text-cyan-900 text-2xl font-bold">9</span>
-                    <span class="bg-white px-4 py-5 flex items-center justify-center text-cyan-900 text-2xl font-bold">1</span>
-                    <span class="bg-white px-4 py-5 flex items-center justify-center text-cyan-900 text-2xl font-bold">7</span>
-                    <span class="bg-white px-4 py-5 flex items-center justify-center text-cyan-900 text-2xl font-bold">4</span>
                     <span class="bg-white px-4 py-5 flex items-center justify-center text-cyan-900 text-2xl font-bold">3</span>
+                    <span class="bg-white px-4 py-5 flex items-center justify-center text-cyan-900 text-2xl font-bold">2</span>
+                    <span class="bg-white px-4 py-5 flex items-center justify-center text-cyan-900 text-2xl font-bold">9</span>
+                    <span class="bg-white px-4 py-5 flex items-center justify-center text-cyan-900 text-2xl font-bold">3</span>
+                    <span class="bg-white px-4 py-5 flex items-center justify-center text-cyan-900 text-2xl font-bold">2</span>
+                    <span class="bg-white px-4 py-5 flex items-center justify-center text-cyan-900 text-2xl font-bold">9</span>
                 </div>
             </div>
 

@@ -37,6 +37,8 @@ class ContactForm extends Component
             $this->mess['message'] = "Thank you for reaching out! We'll get back to you shortly.";
             $this->mess['type'] = 'success';
             $this->mess['show'] = true;
+
+            $this->resetForm();
         }catch(\Throwable $e){
             $this->mess['message'] = "Sorry, we encountered an error.".$e->getMessage();
             $this->mess['type'] = 'danger';
@@ -44,6 +46,13 @@ class ContactForm extends Component
         }
     }
 
+    public function resetForm()
+    {
+        $this->name = '';
+        $this->email = '';
+        $this->phone = '';
+        $this->message = '';
+    }
 
     public function clearNotification()
     {

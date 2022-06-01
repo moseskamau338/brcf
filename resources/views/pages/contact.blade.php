@@ -135,7 +135,7 @@
                             </p>
                             <div class="flex mb-8 lg:mt-6 lg:mb-0">
                                 <div class="inline-flex">
-                                    <a href="#_" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-pink-700 transition duration-150 ease-in-out bg-indigo-100 border border-transparent rounded-md hover:text-pink-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-indigo-300">
+                                    <a href="/donate" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-pink-700 transition duration-150 ease-in-out bg-indigo-100 border border-transparent rounded-md hover:text-pink-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-indigo-300">
                                         Donate
                                         <i class="ml-2 fa fa-box-heart"></i>
                                     </a>
