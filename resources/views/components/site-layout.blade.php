@@ -11,6 +11,7 @@
 
         <link rel="stylesheet" href="{{mix('css/app.css')}}" />
         <link rel="stylesheet" href="{{asset('css/custom.css')}}" />
+        @livewireStyles
         <style>
             [x-cloack] {display: none;}
             html,body{
@@ -29,5 +30,6 @@
         @include('layouts.partials.footer')
 
        {{ $scripts?? null }}
+        @livewireScripts
     </body>
 </html>
