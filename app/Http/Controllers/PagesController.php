@@ -25,6 +25,10 @@ class PagesController extends Controller
     {
         return view('pages.contact');
     }
+    public function donate(): \Illuminate\Contracts\View\View
+    {
+        return view('pages.donate');
+    }
 
     public function volunteer(): \Illuminate\Contracts\View\View
     {
