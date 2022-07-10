@@ -17,15 +17,8 @@ jobs:
       uses: actions/checkout@v3
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
-      with:
-        server: ftp.bethraphafoundation.org
-        username: ${{ secrets.CPANEL_USERNAME }}
-        password: ${{ secrets.CPANEL_PASSWORD }}
-        server-dir: /
-        
     - name: Sync files
-      run: php symlink('./website/storage/app/visitations', './public_html/images/visitations');
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ftp.bethraphafoundation.org
         username: ${{ secrets.CPANEL_USERNAME }}
@@ -49,6 +42,7 @@ jobs:
           **/lang*
           **/resources*
           **/routes*
+          **/storage*
           **/tests*
           **/.git*/**
           **/node_modules/**
