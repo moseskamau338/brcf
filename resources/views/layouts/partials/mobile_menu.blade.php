@@ -4,7 +4,7 @@
       <div class="flex">
         <div class="flex-shrink-0 flex items-center">
           <img class="block lg:hidden h-8 w-auto" src="{{asset('images/logo-icon.svg')}}" alt="Beth Rapha Cancer Foundation">
-          <img class="hidden lg:block h-8 w-auto" src="{{asset('images/logo-color.svg')}}" alt="Beth Rapha Cancer Foundation">
+          <img class="hidden lg:block h-8 w-auto" src="{{asset('images/logo.svg')}}" alt="Beth Rapha Cancer Foundation">
         </div>
         <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
           @foreach($globalData->mainMenu as $menu)
@@ -14,10 +14,10 @@
                <a href="{{ route($menu->route) }}" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"> {{ $menu->name }} </a>
             @endif
           @endforeach
-         
+
         </div>
       </div>
-     
+
       <div class="-mr-2 flex items-center sm:hidden">
         <!-- Mobile menu button -->
         <button x-on:click='showMobileMenu = !showMobileMenu' type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-500" aria-controls="mobile-menu" aria-expanded="false">
@@ -50,16 +50,16 @@
   </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div 
+  <div
       x-transition:enter="duration-150 ease-out"
       x-transition:enter-start="opacity-0 scale-95"
       x-transition:enter-end="opacity-100 scale-100"
       x-transition:leave="duration-100 ease-in"
       x-transition:leave-start="opacity-100 scale-100"
-      x-transition:leave-end="opacity-0 scale-95" 
+      x-transition:leave-end="opacity-0 scale-95"
       x-show='showMobileMenu' class="sm:hidden" id="mobile-menu">
     <div class="pt-2 pb-3 space-y-1">
-     
+
       @foreach($globalData->mainMenu as $menu)
         @if(\Request::route()->getName() === $menu->route)
           <a href="{{ route($menu->route) }}" class="bg-pink-50 border-pink-500 text-pink-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">{{ $menu->name }}</a>

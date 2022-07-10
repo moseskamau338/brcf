@@ -107,10 +107,10 @@
                         Join Our Volunteer Program
                       </h3>
                       <p class="mt-6 text-lg text-indigo-50 max-w-3xl">
-                       There's no better way of fulfilling your life's call other than to commit your tallents and skills to uplifting humanity.
+                       There's no better way of fulfilling your life's call other than to commit your talents and skills to uplifting humanity.
                       </p>
                       <p class="mt-6 text-lg text-indigo-50 max-w-3xl">
-                       When you put a smile on the helpess and weary, when they glorify God because of your labour of love, then you can be sure that God will take care of you.
+                       When you put a smile on the helpless and weary, when they glorify God because of your labour of love, then you can be sure that God will take care of you.
                       </p>
 
                     </div>

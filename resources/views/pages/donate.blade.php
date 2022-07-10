@@ -57,13 +57,13 @@
 
             <div class="px-4">
                 <h2 class="font-bold text-cyan-900 text-xl">Bank Donations</h2>
-                <p class="text-cyan-900">For bank donations, use the accounts below:</p>
+                <p class="text-cyan-900">For bank donations, use the account below:</p>
 
                 <dl class="text-gray-600 tracking-wide ml-4 mt-4">Bank Details</dl>
                 <div class="flex flex-row space-x-4">
                     <dt class="mt-6">
                         <dd class="text-cyan-900 flex flex-col">
-                            <span class="text-lg font-bold">Standard Chattered Bank</span>
+                            <span class="text-lg font-bold">Standard Chartered Bank</span>
                             <span class="text-sm">Westlands Branch</span>
                         </dd>
                     </dt>

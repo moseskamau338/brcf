@@ -59,7 +59,7 @@
                                   <h2 class="text-3xl text-cyan-900 font-extrabold tracking-tight sm:text-4xl">On a mission to empower teams</h2>
                                   <div class="mt-6 text-gray-500 space-y-6">
                                     <p class="text-lg">Beth Rapha Cancer Foundation was officially registered as an NGO by the NGO board of Kenya on the 29th of June 2021. It was founded by five friends with the aim of alleviating the plight of cancer patients.</p>
-                                    <p class="text-base leading-7">In 2017, the Kenyan media highlighted the case of cancer patients who spent the night in the corridors of public hospitals during the course of treatment. This was occasioned mostly by lack of a place to stay in Nairobi.  A good number of these patients came from areas that are far from Nairobi and they did not have relatives to host them in Nairobi.</p>
+                                    <p class="text-base leading-7">In 2017, the Kenyan media highlighted the plight of cancer patients who spend their nights in the corridors of public hospitals during the course of treatment. This was occasioned mostly by lack of a place to stay in Nairobi.  A good number of these patients came from areas that are far from Nairobi and they did not have relatives to host them in Nairobi.</p>
                                     <p class="text-base leading-7">Those patients who are undergoing radiotherapy which on average takes between a month or two are required to attend the sessions continuously for the whole month, thus lack of a place to stay poses a huge challenge for these patients. In view of this, the five friends came together to seek for ways they could formulate practical interventions to alleviate the dire situation.</p>
                                   </div>
                                 </div>
@@ -129,10 +129,9 @@
               </div>
             <div class="columns-4 gap-3 w-[1200px] mx-auto space-y-3 pb-28">
                 @foreach($pictures as $picture)
-                <div class="bg-gray-200 break-inside-avoid hover:scale-105 transition-all">
-                    <img loading="lazy" src="{{$picture}}" alt="Visitation" class="rounded shadow">
-                </div>
-
+                    <div @click="open = true" class="bg-gray-200 break-inside-avoid hover:scale-105 transition-all">
+                        <img loading="lazy" src="{{$picture}}" alt="Visitation" class="rounded shadow">
+                    </div>
                 @endforeach
             </div>
             </div>
@@ -149,7 +148,6 @@
                 </div>
 
                 <div class="h-full bg-pink-400/20 w-full flex items-center justify-center overflow-hidden" x-data="{activeSlide: 0, slides: {{ json_encode($pictures,TRUE)}} }">
-
                   <template x-for="(slide, index) in slides" :key="index">
                     <div class="h-full w-full flex items-center justify-center absolute">
                       <div class="absolute top-0 bottom-0 py-2 md:py-24 px-2 flex flex-col items-center justify-center"
@@ -172,7 +170,6 @@
                       </div>
                     </div>
                   </template>
-
                   <div  class="fixed z-[9999] bottom-0 mb-4 md:mb-2 transform -translate-x-8 md:-translate-x-10 flex justify-center">
                     <div class="flex items-center justify-end w-12 mr-3 md:mr-16">
                       <button
@@ -193,8 +190,6 @@
                       </button>
                     </div>
                   </div>
-
-
                 </div>
               </div>
         </section>
@@ -220,7 +215,7 @@
                           <ul class="text-base font-normal text-white marker:text-white list-disc">
                             <li>Lack of proper nutrition during treatment,</li>
                             <li>Lack of transport to and from hospital,</li>
-                            <li>lack of financial means to pay for treatment (Tests, imaging and procedures)</li>
+                            <li>Lack of financial means to pay for treatment (Tests, imaging and procedures)</li>
                           </ul>
                           <p class="text-white text-2xl font-bold pl-0 mt-10 tracking-wide">
                              You can help us make their situation more bearable. <br /> Donate today and save the day!
@@ -277,7 +272,7 @@
           <div class="md:ml-auto md:w-1/2 md:pl-10">
             <h2 class="text-base font-semibold uppercase tracking-wider text-gray-300">Upcoming Events</h2>
             <p class="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">Volunteer Onboarding Meeting</p>
-            <p class="mt-3 text-lg text-gray-300">We shall be conducting our  yearly volunteer onboarding  where we give guidelinse regarding the organizational procedures as well as provide resource for efficiency within the workforce.</p>
+            <p class="mt-3 text-lg text-gray-300">We shall be conducting our  yearly volunteer onboarding  where we give guidelines regarding the organizational procedures as well as provide resources for efficiency within the workforce.</p>
             <div class="mt-8">
               <dl class="grid grid-cols-2 gap-x-4 gap-y-8 mb-12">
                   <div class="pt-6">
