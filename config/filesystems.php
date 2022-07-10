@@ -38,7 +38,7 @@ return [
         'visitations' => [
             'driver' => 'local',
             'root' => storage_path('app/visitations'),
-            'url' => env('APP_URL').'/images/visitations',
+            'url' => '/images/visitations',
             'visibility' => 'public',
         ],
 

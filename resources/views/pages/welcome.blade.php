@@ -160,7 +160,7 @@
                                         <h2 class="text-lg lg:text-3xl leading-7 text-cyan-900 lg:leading-10 f-f-r py-4 lg:py-8"><b>
                                                 Compassion and brotherly love.
                                             </b> We are there because others are there. No one should carry their  burden alone.
-                                            The belief that we  are all brothers and sisters in Christ and have one Father, have one father, the Lord who loves all
+                                            We believe that we  are all brothers and sisters in Christ and have one Father, the Lord who loves all.
                                         </h2>
                                         <a class="flex items-center" href="/about-us">
                                             <h3 class="f-f-r text-2xl font-semibold underline text-color-pink">More about us</h3>
@@ -239,7 +239,7 @@
                                 Volunteer today <span class="block text-indigo-200 xl:inline">and change the world</span>
                             </h2>
                             <p class="mt-1 mb-10 text-sm font-medium text-indigo-200 xl:text-base xl:tracking-wider lg:mb-0">
-                                We have plenty of activities, keep you engaged and fulfilled. follow the link below to signup.
+                                We have plenty of activities, to keep you engaged and fulfilled. Follow the link below to signup.
                             </p>
                             <div class="flex mb-8 lg:mt-6 lg:mb-0">
                                 <div class="inline-flex">

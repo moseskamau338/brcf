@@ -8,11 +8,12 @@
 
             <div class="my-6 text-base text-color f-f-l">
                 <ul class="md:flex items-center">
+                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a class="hover:underline" href="/">Home</a></li>
                     <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a class="hover:underline" href="/about-us">About</a></li>
                     <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a class="hover:underline" href="/contact-us">Contact Us</a></li>
                     {{--<li class="md:mr-6 cursor-pointer pt-4 lg:py-0">Blog</li>--}}
-                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">Gallery</li>
-                    <li class="cursor-pointer pt-4 lg:py-0">Code of Honor</li>
+                    {{--<li class="md:mr-6 cursor-pointer pt-4 lg:py-0">Gallery</li>--}}
+                    {{--<li class="cursor-pointer pt-4 lg:py-0">Code of Honor</li>--}}
                 </ul>
             </div>
             <div class="text-sm text-color mb-10 f-f-l">
