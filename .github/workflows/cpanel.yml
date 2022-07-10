@@ -23,6 +23,7 @@ jobs:
         username: ${{ secrets.CPANEL_USERNAME }}
         password: ${{ secrets.CPANEL_PASSWORD }}
         server-dir: /
+        
     - name: Sync files
       run: php symlink('./website/storage/app/visitations', './public_html/images/visitations');
       with:
