@@ -116,9 +116,9 @@
                     </div>
 
                     <!-- Contact form -->
-                    <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+                    <div class="py-10 px-4 lg:col-span-2">
                       <h3 class="text-3xl font-medium text-gray-900 mb-8">Please fill this Volunteer Application form to start.</h3>
-                      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfyZcTOCzNWZPI7SArw3rCPG39zheh1GxXm9TDJIg_x6ss_Cw/viewform?embedded=true" class="m-auto" width="500" height="560" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfyZcTOCzNWZPI7SArw3rCPG39zheh1GxXm9TDJIg_x6ss_Cw/viewform?embedded=true" width="700" height="560" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                     </div>
                   </div>
                 </div>
