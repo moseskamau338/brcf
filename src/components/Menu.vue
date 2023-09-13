@@ -31,7 +31,7 @@ const routes = [
                         </li>
                     </template>
                 </ul>
-                <a href="#" class="py-3 px-6 bg-white bg-linear-button-about-us text-white text-lg font-bold flex items-center justify-center">
+                <a href="/donate" class="py-3 px-6 bg-white bg-linear-button-about-us text-white text-lg font-bold flex items-center justify-center">
                     Donate
                     <i class="ml-2 fa fa-box-heart"></i>
                 </a>
