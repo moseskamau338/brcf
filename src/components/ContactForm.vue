@@ -38,7 +38,7 @@
          <div class="pt-5">
           <div class="flex justify-end">
             <NButton :color="`rgb(141,158,192)`" attr-type="reset" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 !hover:text-pink-500 !hover:border-pink-500">Cancel</NButton>
-            <NButton :color="`rgb(190,24,93)`" attr-type="submit" :loading="true" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 !hover:text-pink-500 !hover:border-pink-500">Save</NButton>
+            <NButton :color="`rgb(190,24,93)`" attr-type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 !hover:text-pink-500 !hover:border-pink-500">Save</NButton>
           </div>
         </div>
       </form>

@@ -9,11 +9,12 @@ const members = [
     {name:'Ronnie Midigo', specialty:'Health Researcher', image:'/images/team/Ronnie_Midigo.png'},
     {name:'Wilson Mosbey', specialty:'Medical Social Worker', image:'/images/team/wilson_mosbey.png'},
 ]
+const currentUrl = Astro.url;
 ---
 
 <Layout title="Donate Today">
 <div class="bg-linear-pink lg:pb-0">
-     <Menu />
+     <Menu astroUrl={currentUrl} />
     <section class="flex items-center justify-center lg:mt-32 sm:mt-4 sm:pt-4 py-0 bg-white bg-gradient-to-br from-cyan-900 via-cyan-800
     to-pink-400 min-w-screen">
         <div class="relative flex flex-col items-center w-full max-w-6xl px-4 py-8 mx-auto text-center lg:text-left lg:block sm:px-6 md:pb-0 md:pt-12 lg:px-12 lg:py-12">

@@ -9,11 +9,12 @@ const members = [
     {name:'Ronnie Midigo', specialty:'Health Researcher', image:'/images/team/Ronnie_Midigo.png'},
     {name:'Wilson Mosbey', specialty:'Medical Social Worker', image:'/images/team/wilson_mosbey.png'},
 ]
+const currentUrl = Astro.url;
 ---
 
 <Layout title="Contact Us">
 <div class="bg-linear-pink lg:pb-0">
-     <Menu />
+     <Menu astroUrl={currentUrl} />
     <div class="max-w-7xl mx-auto relative bg-white lg:mt-32 shadow-xl sm:mt-4 sm:pt-4">
 
       <div class="max-w-4xl mx-8 mt-4 lg:mx-auto md:mt-16">

@@ -1,5 +1,9 @@
-<script setup lang="ts">
+<script setup>
 import MobileMenu from "./MobileMenu.vue";
+
+const props = defineProps({
+    astroUrl: {type:Object, required: true}
+})
 
 const routes = [
     {name: 'Home', href: '/'},
@@ -26,7 +30,9 @@ const routes = [
                                     <a :href="menu.href">{{menu.name}}</a>
                                 </li>
                         </template>
-                        <li v-else class="xl:pl-8 lg:pl-5 cursor-pointer text-color-1">
+                        <li v-else :class="[
+                            astroUrl.pathname === menu.href ? 'text-rose-500 underline' : 'text-color-1'
+                        ]" class="xl:pl-8 lg:pl-5 cursor-pointer">
                             <a :href="menu.href">{{ menu.name }}</a>
                         </li>
                     </template>
